@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */; };
+		8014DCC5182A20DC0084F0B9 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */; };
+		8014DCC6182A20DC0084F0B9 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */; };
+		8014DCC7182A20DC0084F0B9 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */; };
+		808F5AAA182A1D270019CEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AA9182A1D270019CEFF /* Foundation.framework */; };
+		808F5AAC182A1D270019CEFF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AAB182A1D270019CEFF /* CoreGraphics.framework */; };
+		808F5AAE182A1D270019CEFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AAD182A1D270019CEFF /* UIKit.framework */; };
+		808F5AB4182A1D270019CEFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 808F5AB2182A1D270019CEFF /* InfoPlist.strings */; };
+		808F5AB6182A1D270019CEFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AB5182A1D270019CEFF /* main.m */; };
+		808F5ABA182A1D270019CEFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AB9182A1D270019CEFF /* AppDelegate.m */; };
+		808F5ABC182A1D270019CEFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808F5ABB182A1D270019CEFF /* Images.xcassets */; };
+		808F5AC3182A1D270019CEFF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AC2182A1D270019CEFF /* XCTest.framework */; };
+		808F5AC4182A1D270019CEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AA9182A1D270019CEFF /* Foundation.framework */; };
+		808F5AC5182A1D270019CEFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AAD182A1D270019CEFF /* UIKit.framework */; };
+		808F5ACD182A1D270019CEFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 808F5ACB182A1D270019CEFF /* InfoPlist.strings */; };
+		808F5ACF182A1D270019CEFF /* InputValidatorsExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ACE182A1D270019CEFF /* InputValidatorsExampleTests.m */; };
+		808F5AE8182A1D3E0019CEFF /* AlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADA182A1D3E0019CEFF /* AlphaInputValidator.m */; };
+		808F5AE9182A1D3E0019CEFF /* AlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADA182A1D3E0019CEFF /* AlphaInputValidator.m */; };
+		808F5AEA182A1D3E0019CEFF /* EmailInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADC182A1D3E0019CEFF /* EmailInputValidator.m */; };
+		808F5AEB182A1D3E0019CEFF /* EmailInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADC182A1D3E0019CEFF /* EmailInputValidator.m */; };
+		808F5AEC182A1D3E0019CEFF /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADE182A1D3E0019CEFF /* InputValidator.m */; };
+		808F5AED182A1D3E0019CEFF /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADE182A1D3E0019CEFF /* InputValidator.m */; };
+		808F5AEE182A1D3E0019CEFF /* NumericInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE1182A1D3E0019CEFF /* NumericInputValidator.m */; };
+		808F5AEF182A1D3E0019CEFF /* NumericInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE1182A1D3E0019CEFF /* NumericInputValidator.m */; };
+		808F5AF0182A1D3E0019CEFF /* RegularExpressionInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE3182A1D3E0019CEFF /* RegularExpressionInputValidator.m */; };
+		808F5AF1182A1D3E0019CEFF /* RegularExpressionInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE3182A1D3E0019CEFF /* RegularExpressionInputValidator.m */; };
+		808F5AF2182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* RequiredInputValidator.m */; };
+		808F5AF3182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* RequiredInputValidator.m */; };
+		808F5AF4182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */; };
+		808F5AF5182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */; };
+		808F5AF8182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */; };
+		808F5AF9182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		808F5AC6182A1D270019CEFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 808F5A9E182A1D260019CEFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 808F5AA5182A1D270019CEFF;
+			remoteInfo = InputValidatorsExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8014DCC1182A20DC0084F0B9 /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
+		8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
+		8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
+		808F5AA6182A1D270019CEFF /* InputValidatorsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputValidatorsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		808F5AA9182A1D270019CEFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		808F5AAB182A1D270019CEFF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		808F5AAD182A1D270019CEFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		808F5AB1182A1D270019CEFF /* InputValidatorsExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InputValidatorsExample-Info.plist"; sourceTree = "<group>"; };
+		808F5AB3182A1D270019CEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		808F5AB5182A1D270019CEFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		808F5AB7182A1D270019CEFF /* InputValidatorsExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InputValidatorsExample-Prefix.pch"; sourceTree = "<group>"; };
+		808F5AB8182A1D270019CEFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		808F5AB9182A1D270019CEFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		808F5ABB182A1D270019CEFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		808F5AC1182A1D270019CEFF /* InputValidatorsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputValidatorsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		808F5AC2182A1D270019CEFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		808F5ACA182A1D270019CEFF /* InputValidatorsExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InputValidatorsExampleTests-Info.plist"; sourceTree = "<group>"; };
+		808F5ACC182A1D270019CEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		808F5ACE182A1D270019CEFF /* InputValidatorsExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputValidatorsExampleTests.m; sourceTree = "<group>"; };
+		808F5AD9182A1D3E0019CEFF /* AlphaInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaInputValidator.h; sourceTree = "<group>"; };
+		808F5ADA182A1D3E0019CEFF /* AlphaInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaInputValidator.m; sourceTree = "<group>"; };
+		808F5ADB182A1D3E0019CEFF /* EmailInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailInputValidator.h; sourceTree = "<group>"; };
+		808F5ADC182A1D3E0019CEFF /* EmailInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailInputValidator.m; sourceTree = "<group>"; };
+		808F5ADD182A1D3E0019CEFF /* InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputValidator.h; sourceTree = "<group>"; };
+		808F5ADE182A1D3E0019CEFF /* InputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputValidator.m; sourceTree = "<group>"; };
+		808F5AE0182A1D3E0019CEFF /* NumericInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericInputValidator.h; sourceTree = "<group>"; };
+		808F5AE1182A1D3E0019CEFF /* NumericInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericInputValidator.m; sourceTree = "<group>"; };
+		808F5AE2182A1D3E0019CEFF /* RegularExpressionInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpressionInputValidator.h; sourceTree = "<group>"; };
+		808F5AE3182A1D3E0019CEFF /* RegularExpressionInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularExpressionInputValidator.m; sourceTree = "<group>"; };
+		808F5AE4182A1D3E0019CEFF /* RequiredInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequiredInputValidator.h; sourceTree = "<group>"; };
+		808F5AE5182A1D3E0019CEFF /* RequiredInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequiredInputValidator.m; sourceTree = "<group>"; };
+		808F5AE6182A1D3E0019CEFF /* UITextField+InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+InputValidator.h"; sourceTree = "<group>"; };
+		808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+InputValidator.m"; sourceTree = "<group>"; };
+		808F5AF6182A1DB70019CEFF /* NSObject+IVRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IVRuntimeHelper.h"; sourceTree = "<group>"; };
+		808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IVRuntimeHelper.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		808F5AA3182A1D270019CEFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808F5AAC182A1D270019CEFF /* CoreGraphics.framework in Frameworks */,
+				808F5AAE182A1D270019CEFF /* UIKit.framework in Frameworks */,
+				808F5AAA182A1D270019CEFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808F5ABE182A1D270019CEFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808F5AC3182A1D270019CEFF /* XCTest.framework in Frameworks */,
+				808F5AC5182A1D270019CEFF /* UIKit.framework in Frameworks */,
+				808F5AC4182A1D270019CEFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		808F5A9D182A1D260019CEFF = {
+			isa = PBXGroup;
+			children = (
+				808F5AD8182A1D3E0019CEFF /* InputValidators */,
+				808F5AAF182A1D270019CEFF /* InputValidatorsExample */,
+				808F5AC8182A1D270019CEFF /* InputValidatorsExampleTests */,
+				808F5AA8182A1D270019CEFF /* Frameworks */,
+				808F5AA7182A1D270019CEFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		808F5AA7182A1D270019CEFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				808F5AA6182A1D270019CEFF /* InputValidatorsExample.app */,
+				808F5AC1182A1D270019CEFF /* InputValidatorsExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		808F5AA8182A1D270019CEFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				808F5AA9182A1D270019CEFF /* Foundation.framework */,
+				808F5AAB182A1D270019CEFF /* CoreGraphics.framework */,
+				808F5AAD182A1D270019CEFF /* UIKit.framework */,
+				808F5AC2182A1D270019CEFF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		808F5AAF182A1D270019CEFF /* InputValidatorsExample */ = {
+			isa = PBXGroup;
+			children = (
+				808F5AB8182A1D270019CEFF /* AppDelegate.h */,
+				808F5AB9182A1D270019CEFF /* AppDelegate.m */,
+				8014DCC1182A20DC0084F0B9 /* ExampleViewController.h */,
+				8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */,
+				8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */,
+				808F5ABB182A1D270019CEFF /* Images.xcassets */,
+				808F5AB0182A1D270019CEFF /* Supporting Files */,
+			);
+			path = InputValidatorsExample;
+			sourceTree = "<group>";
+		};
+		808F5AB0182A1D270019CEFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				808F5AB1182A1D270019CEFF /* InputValidatorsExample-Info.plist */,
+				808F5AB2182A1D270019CEFF /* InfoPlist.strings */,
+				808F5AB5182A1D270019CEFF /* main.m */,
+				808F5AB7182A1D270019CEFF /* InputValidatorsExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		808F5AC8182A1D270019CEFF /* InputValidatorsExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				808F5ACE182A1D270019CEFF /* InputValidatorsExampleTests.m */,
+				808F5AC9182A1D270019CEFF /* Supporting Files */,
+			);
+			path = InputValidatorsExampleTests;
+			sourceTree = "<group>";
+		};
+		808F5AC9182A1D270019CEFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				808F5ACA182A1D270019CEFF /* InputValidatorsExampleTests-Info.plist */,
+				808F5ACB182A1D270019CEFF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		808F5AD8182A1D3E0019CEFF /* InputValidators */ = {
+			isa = PBXGroup;
+			children = (
+				808F5AD9182A1D3E0019CEFF /* AlphaInputValidator.h */,
+				808F5ADA182A1D3E0019CEFF /* AlphaInputValidator.m */,
+				808F5ADB182A1D3E0019CEFF /* EmailInputValidator.h */,
+				808F5ADC182A1D3E0019CEFF /* EmailInputValidator.m */,
+				808F5ADD182A1D3E0019CEFF /* InputValidator.h */,
+				808F5ADE182A1D3E0019CEFF /* InputValidator.m */,
+				808F5AE0182A1D3E0019CEFF /* NumericInputValidator.h */,
+				808F5AE1182A1D3E0019CEFF /* NumericInputValidator.m */,
+				808F5AE2182A1D3E0019CEFF /* RegularExpressionInputValidator.h */,
+				808F5AE3182A1D3E0019CEFF /* RegularExpressionInputValidator.m */,
+				808F5AE4182A1D3E0019CEFF /* RequiredInputValidator.h */,
+				808F5AE5182A1D3E0019CEFF /* RequiredInputValidator.m */,
+				808F5AE6182A1D3E0019CEFF /* UITextField+InputValidator.h */,
+				808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */,
+				808F5AF6182A1DB70019CEFF /* NSObject+IVRuntimeHelper.h */,
+				808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */,
+			);
+			name = InputValidators;
+			path = ../InputValidators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		808F5AA5182A1D270019CEFF /* InputValidatorsExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 808F5AD2182A1D270019CEFF /* Build configuration list for PBXNativeTarget "InputValidatorsExample" */;
+			buildPhases = (
+				808F5AA2182A1D270019CEFF /* Sources */,
+				808F5AA3182A1D270019CEFF /* Frameworks */,
+				808F5AA4182A1D270019CEFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InputValidatorsExample;
+			productName = InputValidatorsExample;
+			productReference = 808F5AA6182A1D270019CEFF /* InputValidatorsExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		808F5AC0182A1D270019CEFF /* InputValidatorsExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 808F5AD5182A1D270019CEFF /* Build configuration list for PBXNativeTarget "InputValidatorsExampleTests" */;
+			buildPhases = (
+				808F5ABD182A1D270019CEFF /* Sources */,
+				808F5ABE182A1D270019CEFF /* Frameworks */,
+				808F5ABF182A1D270019CEFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				808F5AC7182A1D270019CEFF /* PBXTargetDependency */,
+			);
+			name = InputValidatorsExampleTests;
+			productName = InputValidatorsExampleTests;
+			productReference = 808F5AC1182A1D270019CEFF /* InputValidatorsExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		808F5A9E182A1D260019CEFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Ramotion;
+				TargetAttributes = {
+					808F5AC0182A1D270019CEFF = {
+						TestTargetID = 808F5AA5182A1D270019CEFF;
+					};
+				};
+			};
+			buildConfigurationList = 808F5AA1182A1D260019CEFF /* Build configuration list for PBXProject "InputValidatorsExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 808F5A9D182A1D260019CEFF;
+			productRefGroup = 808F5AA7182A1D270019CEFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				808F5AA5182A1D270019CEFF /* InputValidatorsExample */,
+				808F5AC0182A1D270019CEFF /* InputValidatorsExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		808F5AA4182A1D270019CEFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808F5AB4182A1D270019CEFF /* InfoPlist.strings in Resources */,
+				8014DCC6182A20DC0084F0B9 /* ExampleViewController.xib in Resources */,
+				808F5ABC182A1D270019CEFF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808F5ABF182A1D270019CEFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808F5ACD182A1D270019CEFF /* InfoPlist.strings in Resources */,
+				8014DCC7182A20DC0084F0B9 /* ExampleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		808F5AA2182A1D270019CEFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808F5ABA182A1D270019CEFF /* AppDelegate.m in Sources */,
+				8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
+				808F5AB6182A1D270019CEFF /* main.m in Sources */,
+				808F5AF2182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */,
+				808F5AEA182A1D3E0019CEFF /* EmailInputValidator.m in Sources */,
+				808F5AF8182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */,
+				808F5AF4182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */,
+				808F5AEE182A1D3E0019CEFF /* NumericInputValidator.m in Sources */,
+				808F5AE8182A1D3E0019CEFF /* AlphaInputValidator.m in Sources */,
+				808F5AEC182A1D3E0019CEFF /* InputValidator.m in Sources */,
+				808F5AF0182A1D3E0019CEFF /* RegularExpressionInputValidator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808F5ABD182A1D270019CEFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808F5AE9182A1D3E0019CEFF /* AlphaInputValidator.m in Sources */,
+				808F5AF9182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */,
+				808F5AED182A1D3E0019CEFF /* InputValidator.m in Sources */,
+				808F5AEF182A1D3E0019CEFF /* NumericInputValidator.m in Sources */,
+				808F5AF3182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */,
+				808F5AEB182A1D3E0019CEFF /* EmailInputValidator.m in Sources */,
+				808F5AF1182A1D3E0019CEFF /* RegularExpressionInputValidator.m in Sources */,
+				8014DCC5182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
+				808F5ACF182A1D270019CEFF /* InputValidatorsExampleTests.m in Sources */,
+				808F5AF5182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		808F5AC7182A1D270019CEFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 808F5AA5182A1D270019CEFF /* InputValidatorsExample */;
+			targetProxy = 808F5AC6182A1D270019CEFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		808F5AB2182A1D270019CEFF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				808F5AB3182A1D270019CEFF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		808F5ACB182A1D270019CEFF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				808F5ACC182A1D270019CEFF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		808F5AD0182A1D270019CEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		808F5AD1182A1D270019CEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		808F5AD3182A1D270019CEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
+				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		808F5AD4182A1D270019CEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
+				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		808F5AD6182A1D270019CEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InputValidatorsExample.app/InputValidatorsExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "InputValidatorsExampleTests/InputValidatorsExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		808F5AD7182A1D270019CEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InputValidatorsExample.app/InputValidatorsExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
+				INFOPLIST_FILE = "InputValidatorsExampleTests/InputValidatorsExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		808F5AA1182A1D260019CEFF /* Build configuration list for PBXProject "InputValidatorsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808F5AD0182A1D270019CEFF /* Debug */,
+				808F5AD1182A1D270019CEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		808F5AD2182A1D270019CEFF /* Build configuration list for PBXNativeTarget "InputValidatorsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808F5AD3182A1D270019CEFF /* Debug */,
+				808F5AD4182A1D270019CEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		808F5AD5182A1D270019CEFF /* Build configuration list for PBXNativeTarget "InputValidatorsExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808F5AD6182A1D270019CEFF /* Debug */,
+				808F5AD7182A1D270019CEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 808F5A9E182A1D260019CEFF /* Project object */;
+}
