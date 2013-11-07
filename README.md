@@ -27,6 +27,20 @@ All you need to do is drop `InputValidators` files into your project, and add `#
 
 ## Example Usage
 
+#### Manual Validation 
+
+``` objective-c
+NSString *emailString = @"email@example.com"
+
+InputValidator *validator = [InputValidator emailValidator];
+NSError *error = nil;
+BOOL isValid = [validator validateInput:emailString error:&error];
+
+if (!isValid) {
+  NSLog(@"%@", [error localizedFailureReason]);
+}
+```
+
 ## License
 
 InputValidators is available under the MIT license.
