@@ -176,7 +176,7 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     
     for (InputValidator *validator in [self _validators]) {
         NSError *error = nil;
-        [self setIsValid:[validator validateInput:self error:&error]];
+        [self setIsValid:[validator validateInput:self.text error:&error]];
         
         if ([self isValid] == NO) {
             [errors addObject:error];

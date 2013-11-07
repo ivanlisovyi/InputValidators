@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleViewController">
             <connections>
-                <outlet property="textField" destination="z04-37-iSO" id="Mwv-yA-ktM"/>
+                <outlet property="tableView" destination="6TD-sz-UOs" id="Gpu-ET-UgT"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -15,24 +15,23 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z04-37-iSO">
-                    <rect key="frame" x="20" y="84" width="280" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMV-Zi-cMl">
-                    <rect key="frame" x="20" y="138" width="280" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Validate">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-sz-UOs">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <connections>
-                        <action selector="validationBtnHandler:" destination="-1" eventType="touchUpInside" id="8BP-RS-Xxq"/>
+                        <outlet property="dataSource" destination="-1" id="4MM-cO-gCl"/>
+                        <outlet property="delegate" destination="-1" id="h8Z-Dh-f9Y"/>
                     </connections>
-                </button>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6TD-sz-UOs" secondAttribute="trailing" id="LIE-rO-3RM"/>
+                <constraint firstItem="6TD-sz-UOs" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="QUA-YV-X99"/>
+                <constraint firstItem="6TD-sz-UOs" firstAttribute="top" secondItem="1" secondAttribute="top" id="Uuf-Aw-PmI"/>
+                <constraint firstAttribute="bottom" secondItem="6TD-sz-UOs" secondAttribute="bottom" id="ywP-iB-CSF"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

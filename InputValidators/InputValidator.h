@@ -43,6 +43,6 @@ static NSInteger const InputValidationRequiredErrorCode = 1004;
 + (instancetype) emailValidator;
 + (instancetype) requiredValidator;
 
-- (BOOL) validateInput:(UITextField *)input error:(NSError **)error;
+- (BOOL) validateInput:(NSString *)input error:(NSError **)error;
 
 @end

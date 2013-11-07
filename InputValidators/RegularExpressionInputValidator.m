@@ -29,12 +29,12 @@
 #pragma mark -
 #pragma mark Validation
 
-- (BOOL) validateInput:(UITextField *) input error:(NSError **) error {
+- (BOOL) validateInput:(NSString *)input error:(NSError **)error {
     NSRegularExpression *regex = [NSRegularExpression
         regularExpressionWithPattern:_regularExpression
         options:NSRegularExpressionAnchorsMatchLines error:error];
     
-    if ([[input text] length] == 0) {
+    if ([input length] == 0) {
         if (error != nil) {
             NSString *theReason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
             *error = [self errorWithReason:theReason code:InputValidationRequiredErrorCode];
@@ -42,9 +42,9 @@
         return NO;
     }
     
-    NSUInteger numberOfMatches = [regex numberOfMatchesInString:[input text]
-        options:NSMatchingAnchored 
-        range:NSMakeRange(0, [[input text] length])];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:input
+                                                        options:NSMatchingAnchored
+                                                          range:NSMakeRange(0, [input length])];
     
     if (numberOfMatches == 0) {
         if (error != nil) {

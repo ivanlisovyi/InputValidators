@@ -7,11 +7,14 @@
 //
 
 #import "ExampleViewController.h"
+#import "ValidatorExampleViewController.h"
 
 #import "InputValidator.h"
 #import "UITextField+InputValidator.h"
 
 @interface ExampleViewController ()
+
+@property (nonatomic, strong) NSArray *titles;
 
 @end
 
@@ -21,13 +24,7 @@
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"Validation Example", @"");
-    
-    InputValidator *requiredValidator = [InputValidator requiredValidator];
-    [_textField addValidator:requiredValidator];
-    
-    InputValidator *emailValidator = [InputValidator emailValidator];
-    [_textField addValidator:emailValidator];
-    
+    self.titles = @[@"RequiredInputValidator", @"EmailInputValidator", @"AlphaInputValidator", @"NumericInputValidator"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,16 +32,40 @@
 }
 
 #pragma mark -
-#pragma mark IBActions 
+#pragma mark UITableViewDataSource
 
-- (IBAction) validationBtnHandler:(id)sender {
-    BOOL isValid = [_textField validate];
-    if (!isValid) {
-        NSLog(@"%@", [_textField errorMessage]);
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_titles count];
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return NSLocalizedString(@"Manual Validation", @"");
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    else {
-        NSLog(@"valid");
-    }
+    
+    cell.textLabel.text = _titles[indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    ValidatorExampleViewController *viewController = [[ValidatorExampleViewController alloc] init];
+    viewController.validatorType = indexPath.row;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

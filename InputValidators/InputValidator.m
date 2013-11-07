@@ -49,7 +49,7 @@
 #pragma mark -
 #pragma mark Validation
 
-- (BOOL) validateInput:(UITextField *) input error:(NSError **) error {
+- (BOOL) validateInput:(NSString *)input error:(NSError **)error {
     if (error) {
         *error = nil; 
     }

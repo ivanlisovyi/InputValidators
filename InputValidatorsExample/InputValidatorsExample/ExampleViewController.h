@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExampleViewController : UIViewController
+@interface ExampleViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, weak) IBOutlet UITextField *textField;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end

@@ -24,8 +24,8 @@
 
 @implementation RequiredInputValidator
 
-- (BOOL) validateInput:(UITextField *) input error:(NSError **) error {
-    NSString *text = [[input text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+- (BOOL) validateInput:(NSString *)input error:(NSError **) error {
+    NSString *text = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([text length] == 0) {
         NSString *reason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
         if (error != nil) {
