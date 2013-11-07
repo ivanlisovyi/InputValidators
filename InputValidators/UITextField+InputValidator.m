@@ -28,6 +28,8 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
 @implementation UITextField (InputValidator)
 
 - (void) addDependency:(UITextField *) textField {
+    NSParameterAssert(textField);
+    
     if ([self _dependencies] == nil) {
         [self _setDependencies:[NSMutableArray array]];
     }
@@ -76,6 +78,8 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
 }
 
 - (void) addDependent:(UITextField *) textField {
+    NSParameterAssert(textField);
+    
     if ([self _dependents] == nil) {
         [self _setDependents:[NSMutableArray array]];
     }
@@ -107,6 +111,8 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
 }
 
 - (void) addValidator:(InputValidator *) aValidator {
+    NSParameterAssert(aValidator);
+    
     if ([self _validators] == nil) {
         [self _setValidators:[NSMutableArray array]];
     }
@@ -141,25 +147,6 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     return [NSArray arrayWithArray:[self _validators]];
 }
 
-- (void) validateWithDependencies {
-    NSArray *array = [self dependencies];
-    BOOL isDependeciesValid = YES;
-    
-    for (UITextField *textField in array) {
-        [textField validate];
-        
-        if (!textField.isValid) {
-            isDependeciesValid = NO;
-            [self setIsValid:NO];
-            break;
-        }
-    }
-    
-    if (isDependeciesValid) {
-        [self validate];
-    }
-}
-
 - (BOOL) isValid {
     return [[self associatedObjectForKey:@"_isValid"] boolValue];
 }
@@ -168,60 +155,32 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     [self setAssociatedObject:@(isValid) forKey:@"_isValid"];
 }
 
-- (BOOL) validate {
-    NSMutableArray *errors = [NSMutableArray array];
-    [self setIsValid:YES];
-    [self setErrorTitle:nil];
-    [self setErrorMessage:nil];
+- (void) validateWithDependencies:(NSError **)error {
+    NSArray *array = [self dependencies];
+    BOOL isDependeciesValid = YES;
     
-    for (InputValidator *validator in [self _validators]) {
-        NSError *error = nil;
-        [self setIsValid:[validator validateInput:self.text error:&error]];
+    for (UITextField *textField in array) {
+        BOOL isValid = [textField validate:error];
         
-        if ([self isValid] == NO) {
-            [errors addObject:error];
+        if (isValid) {
+            isDependeciesValid = NO;
+            [self setIsValid:NO];
+            break;
         }
     }
     
-    if ([self isValid] == NO) {
-        [self setErrorTitle:[[errors objectAtIndex:0] localizedDescription]];
-        [self setErrorMessage:[NSMutableString string]];
-        
-        if ([self textFieldLabel] == nil) {
-            [self setTextFieldLabel:NSLocalizedString(@"Text Field", nil)];
-        }
-        
-        for (NSError *error in errors) {
-            [[self errorMessage] appendFormat:@"%@ - %@\n", [self textFieldLabel], [error localizedFailureReason]];
-        }
-        [[self errorMessage] deleteCharactersInRange:NSMakeRange([[self errorMessage] length] - 1, 1)];
+    if (isDependeciesValid) {
+        [self validate:error];
     }
+}
+
+- (BOOL) validate:(NSError **)error {
+    NSArray *validators = [self _validators];
+    BOOL isValid = [InputValidator validateInput:self.text validators:validators error:error];
     
-    return [self isValid];
-}
-
-- (NSString *) textFieldLabel {
-    return [self associatedObjectForKey:@"_textFieldLabel"];
-}
-
-- (void) setTextFieldLabel:(NSString *) textFieldLabel {
-    [self setAssociatedObject:textFieldLabel forKey:@"_textFieldLabel"];
-}
-
-- (NSString *) errorTitle {
-    return [self associatedObjectForKey:@"_errorTitle"];
-}
-
-- (void) setErrorTitle:(NSString *) errorTitle {
-    [self setAssociatedObject:errorTitle forKey:@"_errorTitle"];
-}
-
-- (NSMutableString *) errorMessage {
-    return [self associatedObjectForKey:@"_errorMessage"];
-}
-
-- (void) setErrorMessage:(NSMutableString *) errorMessage {
-    [self setAssociatedObject:errorMessage forKey:@"_errorMessage"];
+    [self setIsValid:isValid];
+    
+    return isValid;
 }
 
 #pragma mark -

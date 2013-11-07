@@ -38,8 +38,8 @@ extern NSString *const UITextFieldInvalidDependencyException;
 - (void) removeAllValidators;
 - (NSArray *) validators;
 
-- (void) validateWithDependencies;
-- (BOOL) validate;
+- (void) validateWithDependencies:(NSError **)error;
+- (BOOL) validate:(NSError **)error;
 
 - (void) addDependency:(UITextField *) textField;
 - (void) removeDependency:(UITextField *) textField;
@@ -50,7 +50,5 @@ extern NSString *const UITextFieldInvalidDependencyException;
 - (void) removeDependent:(UITextField *) textField;
 - (void) removeAllDependents;
 - (NSArray *) dependents;
-
-- (NSMutableString *) errorMessage;
 
 @end
