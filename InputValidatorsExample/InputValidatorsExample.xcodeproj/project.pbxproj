@@ -37,8 +37,6 @@
 		808F5AF3182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* RequiredInputValidator.m */; };
 		808F5AF4182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */; };
 		808F5AF5182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */; };
-		808F5AF8182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */; };
-		808F5AF9182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */; };
 		80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */; };
 		80D3F918182B757700DCF7C0 /* ValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */; };
 		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
@@ -89,8 +87,6 @@
 		808F5AE5182A1D3E0019CEFF /* RequiredInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequiredInputValidator.m; sourceTree = "<group>"; };
 		808F5AE6182A1D3E0019CEFF /* UITextField+InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+InputValidator.h"; sourceTree = "<group>"; };
 		808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+InputValidator.m"; sourceTree = "<group>"; };
-		808F5AF6182A1DB70019CEFF /* NSObject+IVRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IVRuntimeHelper.h"; sourceTree = "<group>"; };
-		808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IVRuntimeHelper.m"; sourceTree = "<group>"; };
 		80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorExampleViewController.h; sourceTree = "<group>"; };
 		80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidatorExampleViewController.xib; sourceTree = "<group>"; };
@@ -220,8 +216,6 @@
 				808F5AE5182A1D3E0019CEFF /* RequiredInputValidator.m */,
 				808F5AE6182A1D3E0019CEFF /* UITextField+InputValidator.h */,
 				808F5AE7182A1D3E0019CEFF /* UITextField+InputValidator.m */,
-				808F5AF6182A1DB70019CEFF /* NSObject+IVRuntimeHelper.h */,
-				808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */,
 			);
 			name = InputValidators;
 			path = ../InputValidators;
@@ -333,7 +327,6 @@
 				808F5AF2182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */,
 				80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */,
 				808F5AEA182A1D3E0019CEFF /* EmailInputValidator.m in Sources */,
-				808F5AF8182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */,
 				808F5AF4182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */,
 				808F5AEE182A1D3E0019CEFF /* NumericInputValidator.m in Sources */,
 				808F5AE8182A1D3E0019CEFF /* AlphaInputValidator.m in Sources */,
@@ -347,7 +340,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				808F5AE9182A1D3E0019CEFF /* AlphaInputValidator.m in Sources */,
-				808F5AF9182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */,
 				808F5AED182A1D3E0019CEFF /* InputValidator.m in Sources */,
 				808F5AEF182A1D3E0019CEFF /* NumericInputValidator.m in Sources */,
 				808F5AF3182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */,

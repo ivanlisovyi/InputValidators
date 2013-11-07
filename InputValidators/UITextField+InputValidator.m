@@ -20,8 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <objc/runtime.h>
 #import "UITextField+InputValidator.h"
-#import "NSObject+IVRuntimeHelper.h"
 
 NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDependencyException";
 
@@ -222,6 +222,21 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
 
 - (void) setErrorMessage:(NSMutableString *) errorMessage {
     [self setAssociatedObject:errorMessage forKey:@"_errorMessage"];
+}
+
+#pragma mark -
+#pragma mark runtime association
+
+- (id) associatedObjectForKey:(NSString *) aKey {
+    return objc_getAssociatedObject(self, (__bridge const void *) (aKey));
+}
+
+- (void) setAssociatedObject:(id) anObject forKey:(NSString *) aKey {
+    objc_setAssociatedObject(self, (__bridge const void *) (aKey), anObject, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (void) removeAssociatedObjects {
+    objc_removeAssociatedObjects(self);
 }
 
 @end
