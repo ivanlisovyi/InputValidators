@@ -27,7 +27,7 @@ All you need to do is drop `InputValidators` files into your project, and add `#
 
 ## Example Usage
 
-#### Manual Validation 
+#### Text Validation 
 
 ``` objective-c
 NSString *emailString = @"email@example.com"
@@ -41,7 +41,7 @@ if (!isValid) {
 }
 ```
 
-### Manual Validation with multiple validators
+### Text Validation with multiple validators
 
 ``` objective-c
 NSString *emailString = @"email@example.com"
