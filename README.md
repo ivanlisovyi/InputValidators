@@ -41,6 +41,20 @@ if (!isValid) {
 }
 ```
 
+### Manual Validation with multiple validators
+
+``` objective-c
+NSString *emailString = @"email@example.com"
+
+NSArray *validators = @[[InputValidator requiredValidator], [InputValidator emailValidator]];
+NSError *error = nil;
+BOOL isValid = [InputValidator validateInput:emailString validators:validators error:&error];
+
+if (!isValid) {
+  NSLog(@"%@", [error localizedFailureReason]);
+}
+```
+
 ## License
 
 InputValidators is available under the MIT license.
