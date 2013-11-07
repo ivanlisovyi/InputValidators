@@ -49,6 +49,36 @@
 #pragma mark -
 #pragma mark Validation
 
++ (BOOL) validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error {
+    NSMutableArray *errors = [NSMutableArray array];
+    for (InputValidator *validator in validators) {
+        NSError *error = nil;
+        BOOL isValid = [validator validateInput:input error:&error];
+        
+        
+        if (!isValid) {
+            [errors addObject:error];
+        }
+    }
+    
+    BOOL isValid = [errors count] == 0;
+    
+    if (!isValid) {
+        NSMutableString *errorMessage = [NSMutableString string];
+        for (NSError *error in errors) {
+            [errorMessage appendFormat:@"%@\n", [error localizedFailureReason]];
+        }
+        [errorMessage deleteCharactersInRange:NSMakeRange([errorMessage length] - 1, 1)];
+        
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey : [[errors firstObject] localizedDescription],
+                                   NSLocalizedFailureReasonErrorKey : errorMessage};
+        
+        *error = [NSError errorWithDomain:InputValidationErrorDomain code:InputValidationMultipleErrorCode userInfo:userInfo];
+    }
+    
+    return isValid;
+}
+
 - (BOOL) validateInput:(NSString *)input error:(NSError **)error {
     if (error) {
         *error = nil; 

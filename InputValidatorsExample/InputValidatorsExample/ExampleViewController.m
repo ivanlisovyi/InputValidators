@@ -8,13 +8,16 @@
 
 #import "ExampleViewController.h"
 #import "ValidatorExampleViewController.h"
+#import "MultipleValidatorExampleViewController.h"
 
 #import "InputValidator.h"
 #import "UITextField+InputValidator.h"
 
 @interface ExampleViewController ()
 
-@property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) NSArray *manualTitles;
+@property (nonatomic, strong) NSArray *multipleManualTitles;
+@property (nonatomic, strong) NSArray *sectionsTitles;
 
 @end
 
@@ -24,7 +27,9 @@
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"Validation Example", @"");
-    self.titles = @[@"RequiredInputValidator", @"EmailInputValidator", @"AlphaInputValidator", @"NumericInputValidator"];
+    self.manualTitles = @[@"RequiredInputValidator", @"EmailInputValidator", @"AlphaInputValidator", @"NumericInputValidator"];
+    self.multipleManualTitles = @[@"Email+Required", @"Alpha+Required", @"Numeric+Required"];
+    self.sectionsTitles = @[@"Single Manual Validation", @"Multiple Manual Validation"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +40,22 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_titles count];
+    if (section == 0) {
+        return [_manualTitles count];
+    }
+    else if (section == 1) {
+        return [_multipleManualTitles count];;
+    }
+    
+    return 0;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return [_sectionsTitles count];
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return NSLocalizedString(@"Manual Validation", @"");
+    return _sectionsTitles[section];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,7 +67,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = _titles[indexPath.row];
+    if (indexPath.section == 0) {
+        cell.textLabel.text = _manualTitles[indexPath.row];
+    }
+    else if (indexPath.section == 1) {
+        cell.textLabel.text = _multipleManualTitles[indexPath.row];
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -63,8 +84,16 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    ValidatorExampleViewController *viewController = [[ValidatorExampleViewController alloc] init];
-    viewController.validatorType = indexPath.row;
+    UIViewController *viewController = nil;
+    if (indexPath.section == 0) {
+        viewController = [[ValidatorExampleViewController alloc] init];
+        [(ValidatorExampleViewController *)viewController setValidatorType:indexPath.row];
+    }
+    else if (indexPath.section == 1) {
+        viewController = [[MultipleValidatorExampleViewController alloc] init];
+        [(MultipleValidatorExampleViewController *)viewController setValidatorsType:indexPath.row];
+    }
+    
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

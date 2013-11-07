@@ -27,6 +27,7 @@ static NSInteger const InputValidationNumericErrorCode = 1001;
 static NSInteger const InputValidationAlphabetErrorCode = 1002;
 static NSInteger const InputValidationEmailErrorCode = 1003;
 static NSInteger const InputValidationRequiredErrorCode = 1004;
+static NSInteger const InputValidationMultipleErrorCode = 1100;
 
 
 @protocol InputValidator <NSObject>
@@ -42,6 +43,8 @@ static NSInteger const InputValidationRequiredErrorCode = 1004;
 + (instancetype) alphaValidator;
 + (instancetype) emailValidator;
 + (instancetype) requiredValidator;
+
++ (BOOL) validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error;
 
 - (BOOL) validateInput:(NSString *)input error:(NSError **)error;
 

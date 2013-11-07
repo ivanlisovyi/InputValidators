@@ -41,6 +41,8 @@
 		808F5AF9182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AF7182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m */; };
 		80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */; };
 		80D3F918182B757700DCF7C0 /* ValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */; };
+		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
+		80D3F91D182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,9 @@
 		80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorExampleViewController.h; sourceTree = "<group>"; };
 		80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidatorExampleViewController.xib; sourceTree = "<group>"; };
+		80D3F919182B848D00DCF7C0 /* MultipleValidatorExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleValidatorExampleViewController.h; sourceTree = "<group>"; };
+		80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleValidatorExampleViewController.m; sourceTree = "<group>"; };
+		80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleValidatorExampleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +165,9 @@
 				80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */,
 				80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */,
 				80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */,
+				80D3F919182B848D00DCF7C0 /* MultipleValidatorExampleViewController.h */,
+				80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */,
+				80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */,
 				808F5ABB182A1D270019CEFF /* Images.xcassets */,
 				808F5AB0182A1D270019CEFF /* Supporting Files */,
 			);
@@ -298,6 +306,7 @@
 				808F5AB4182A1D270019CEFF /* InfoPlist.strings in Resources */,
 				8014DCC6182A20DC0084F0B9 /* ExampleViewController.xib in Resources */,
 				808F5ABC182A1D270019CEFF /* Images.xcassets in Resources */,
+				80D3F91D182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +331,7 @@
 				8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
 				808F5AB6182A1D270019CEFF /* main.m in Sources */,
 				808F5AF2182A1D3E0019CEFF /* RequiredInputValidator.m in Sources */,
+				80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */,
 				808F5AEA182A1D3E0019CEFF /* EmailInputValidator.m in Sources */,
 				808F5AF8182A1DB70019CEFF /* NSObject+IVRuntimeHelper.m in Sources */,
 				808F5AF4182A1D3E0019CEFF /* UITextField+InputValidator.m in Sources */,
