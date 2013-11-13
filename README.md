@@ -19,7 +19,40 @@ Currently available default validators:
 
 ### Cocoa Pods 
 
-Soon...
+The recommended approach for installating `InputValidators` is via the [CocoaPods](http://cocoapods.org/) package manager.
+
+Install CocoaPods if not already available:
+
+``` bash
+$ [sudo] gem install cocoapods
+$ pod setup
+```
+
+Change to the directory of your Xcode project:
+
+``` bash
+$ cd /path/to/MyProject
+$ touch Podfile
+$ edit Podfile
+```
+
+Edit your Podfile and add InputValidators:
+
+``` bash
+pod 'InputValidators', '~> 0.1'
+```
+
+Install into your Xcode project:
+
+``` bash
+$ pod install
+```
+
+Open your project in Xcode from the .xcworkspace file
+
+``` bash
+$ open MyProject.xcworkspace
+```
 
 ### Manual Install
 
