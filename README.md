@@ -1,6 +1,6 @@
 # InputValidators
 
-Simple Objective-C text validation.
+Simple Objective-C solution for text validation.
 
 Currently available default validators:
 
@@ -10,7 +10,7 @@ Currently available default validators:
 * Numeric validator
 
 ## Requirements
-* Xcode 4.5 or higher
+* Xcode 5.0 or higher
 * Apple LLVM compiler
 * iOS 5.0 or higher
 * ARC
