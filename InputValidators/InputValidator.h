@@ -32,7 +32,7 @@ static NSInteger const InputValidationMultipleErrorCode = 1100;
 
 @protocol InputValidator <NSObject>
 
-- (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code;
++ (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code;
 
 @end
 

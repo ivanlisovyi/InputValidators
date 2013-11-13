@@ -37,7 +37,7 @@
     if ([input length] == 0) {
         if (error != nil) {
             NSString *theReason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
-            *error = [self errorWithReason:theReason code:InputValidationRequiredErrorCode];
+            *error = [[self class] errorWithReason:theReason code:InputValidationRequiredErrorCode];
         }
         return NO;
     }
@@ -58,7 +58,7 @@
 }
 
 - (NSError *) error {
-    return [self errorWithReason:_reason code:_errorCode];
+    return [[self class] errorWithReason:_reason code:_errorCode];
 }
 
 

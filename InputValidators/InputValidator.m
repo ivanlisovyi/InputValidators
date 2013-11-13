@@ -70,10 +70,7 @@
         }
         [errorMessage deleteCharactersInRange:NSMakeRange([errorMessage length] - 1, 1)];
         
-        NSDictionary *userInfo = @{NSLocalizedDescriptionKey : [[errors firstObject] localizedDescription],
-                                   NSLocalizedFailureReasonErrorKey : errorMessage};
-        
-        *error = [NSError errorWithDomain:InputValidationErrorDomain code:InputValidationMultipleErrorCode userInfo:userInfo];
+        *error = [[self class] errorWithReason:errorMessage code:InputValidationMultipleErrorCode];
     }
     
     return isValid;
@@ -87,13 +84,11 @@
     return NO;
 }
 
-- (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code {
++ (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code {
     NSString *description = NSLocalizedString(@"Input Validation Failed", @"Input Validation Failed");
-    NSArray *objArray = [NSArray arrayWithObjects:description, aReason, nil];
-    NSArray *keyArray = [NSArray arrayWithObjects:
-                         NSLocalizedDescriptionKey, NSLocalizedFailureReasonErrorKey, nil];
-    
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:objArray forKeys:keyArray];
+    NSDictionary *userInfo =  @{NSLocalizedDescriptionKey : description,
+                                NSLocalizedFailureReasonErrorKey : aReason};
+
     NSError *error = [NSError errorWithDomain:InputValidationErrorDomain code:code userInfo:userInfo];
     return error;
 }
