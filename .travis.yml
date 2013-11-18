@@ -2,6 +2,6 @@ language: objective-c
 
 before_install:
     - brew update
-    - brew install xctool
+    - brew uninstall xctool && brew install xctool --HEAD
 
 script: xctool -project InputValidatorsExample/InputValidatorsExample.xcodeproj -scheme InputValidatorsExample
