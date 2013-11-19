@@ -162,7 +162,7 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     for (UITextField *textField in array) {
         BOOL isValid = [textField validate:error];
         
-        if (isValid) {
+        if (!isValid) {
             isDependeciesValid = NO;
             [self setIsValid:NO];
             break;

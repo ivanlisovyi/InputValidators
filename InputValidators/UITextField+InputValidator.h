@@ -32,6 +32,7 @@ extern NSString *const UITextFieldInvalidDependencyException;
 @interface UITextField (InputValidator)
 
 - (BOOL) containsValidator:(InputValidator *) aValidator;
+- (BOOL) isValid;
 
 - (void) addValidator:(InputValidator *) aValidator;
 - (void) removeValidator:(InputValidator *) aValidator;
