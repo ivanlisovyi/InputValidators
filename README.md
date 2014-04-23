@@ -8,6 +8,7 @@ Currently available default validators:
 * Email validator
 * Alpha validator
 * Numeric validator
+* RegularExpression validator
 
 ## Requirements
 * Xcode 5.0 or higher
