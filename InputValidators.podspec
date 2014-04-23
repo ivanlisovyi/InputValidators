@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "InputValidators"
-  s.version      = "0.2"
+  s.version      = "0.3"
   s.summary      = "Simple Objective-C solution for text validation."
   s.homepage     = "https://github.com/kshin/InputValidators"
   s.license      = 'MIT'
