@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "RegularExpressionInputValidator.h"
-#import "RequiredInputValidator.h"
+#import "LKRegularExpressionInputValidator.h"
+#import "LKRequiredInputValidator.h"
 
 
-@implementation RegularExpressionInputValidator
+@implementation LKRegularExpressionInputValidator
 
 #pragma mark -
 #pragma mark Validation
@@ -36,7 +36,7 @@
     
     if ([input length] == 0) {
         if (error != nil) {
-            NSString *theReason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
+            NSString *theReason = NSLocalizedString(@"The text field doesn't contain any characters, can't validate", @"Validator reason (Alert)");
             *error = [[self class] errorWithReason:theReason code:InputValidationRequiredErrorCode];
         }
         return NO;

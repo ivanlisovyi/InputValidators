@@ -7,7 +7,7 @@
 //
 
 #import "ValidatorExampleViewController.h"
-#import "InputValidator.h"
+#import "LKValidators.h"
 
 @interface ValidatorExampleViewController ()
 
@@ -34,7 +34,7 @@
 #pragma mark IBActions
 
 - (IBAction) validateBtnHandler:(id)sender {
-    InputValidator *validator = [self inputValidator];
+    LKValidator *validator = [self inputValidator];
 
     NSError *error = nil;
     BOOL isValid = [validator validateInput:_textField.text error:&error];
@@ -57,19 +57,19 @@
 
 #pragma mark -
 
-- (InputValidator *) inputValidator {
+- (LKValidator *) inputValidator {
     switch (_validatorType) {
         case ValidatorTypeRequired:
-            return [InputValidator requiredValidator];
+            return [LKRequiredInputValidator validator];
             
         case ValidatorTypeEmail:
-            return [InputValidator emailValidator];
+            return [LKEmailInputValidator validator];
             
         case ValidatorTypeAlpha:
-            return [InputValidator alphaValidator];
+            return [LKAlphaInputValidator validator];
             
         case ValidatorTypeNumeric:
-            return [InputValidator numericValidator];
+            return [LKNumericInputValidator validator];
             
         default:
             break;

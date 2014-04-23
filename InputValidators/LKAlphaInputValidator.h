@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,20 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "RequiredInputValidator.h"
+#import "LKRegularExpressionInputValidator.h"
 
-@implementation RequiredInputValidator
-
-- (BOOL) validateInput:(NSString *)input error:(NSError **) error {
-    NSString *text = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if ([text length] == 0) {
-        NSString *reason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
-        if (error != nil) {
-            *error = [[self class] errorWithReason:reason code:InputValidationRequiredErrorCode];
-        }
-        return NO;
-    }
-    return YES;
-}
+@interface LKAlphaInputValidator : LKRegularExpressionInputValidator
 
 @end

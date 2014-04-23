@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,36 +20,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "LKAlphaInputValidator.h"
 
-#import "RequiredInputValidator.h"
-#import "NumericInputValidator.h"
-#import "AlphaInputValidator.h"
-#import "EmailInputValidator.h"
+@implementation LKAlphaInputValidator
 
-extern NSString *const UITextFieldInvalidDependencyException;
-
-@interface UITextField (InputValidator)
-
-- (BOOL) containsValidator:(InputValidator *) aValidator;
-- (BOOL) isValid;
-
-- (void) addValidator:(InputValidator *) aValidator;
-- (void) removeValidator:(InputValidator *) aValidator;
-- (void) removeAllValidators;
-- (NSArray *) validators;
-
-- (void) validateWithDependencies:(NSError **)error;
-- (BOOL) validate:(NSError **)error;
-
-- (void) addDependency:(UITextField *) textField;
-- (void) removeDependency:(UITextField *) textField;
-- (void) removeAllDependencies;
-- (NSMutableArray *) dependencies;
-
-- (void) addDependent:(UITextField *) textField;
-- (void) removeDependent:(UITextField *) textField;
-- (void) removeAllDependents;
-- (NSArray *) dependents;
+- (id) init {
+    self = [super init];
+    
+    if (self) {
+        _regularExpression = @"^[a-zA-Z]*$";
+        _reason = NSLocalizedString(@"The input can contain only letters", @"Validator reason (Alert)");
+        _errorCode = InputValidationAlphabetErrorCode;
+    }
+    
+    return self;
+}
 
 @end

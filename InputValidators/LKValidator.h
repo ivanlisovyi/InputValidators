@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,8 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "RegularExpressionInputValidator.h"
+#import <Foundation/Foundation.h>
 
-@interface NumericInputValidator : RegularExpressionInputValidator
+static NSString *const InputValidationErrorDomain  = @"InputValidationErrorDomain";
+static NSInteger const InputValidationNumericErrorCode = 1001;
+static NSInteger const InputValidationAlphabetErrorCode = 1002;
+static NSInteger const InputValidationEmailErrorCode = 1003;
+static NSInteger const InputValidationRequiredErrorCode = 1004;
+static NSInteger const InputValidationMultipleErrorCode = 1100;
+
+
+@protocol LKValidator <NSObject>
+
++ (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code;
+
+@end
+
+
+@interface LKValidator : NSObject <LKValidator>
+
++ (instancetype) validator;
+
+- (BOOL) validateInput:(NSString *)input error:(NSError **)error;
 
 @end

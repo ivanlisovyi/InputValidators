@@ -7,7 +7,7 @@
 //
 
 #import "MultipleValidatorExampleViewController.h"
-#import "InputValidator.h"
+#import "LKValidators.h"
 
 @interface MultipleValidatorExampleViewController ()
 
@@ -37,7 +37,7 @@
     NSArray *validators = [self inputValidators];
     
     NSError *error = nil;
-    BOOL isValid = [InputValidator validateInput:_textField.text validators:validators error:&error];
+    BOOL isValid = [LKValidator validateInput:_textField.text validators:validators error:&error];
     
     NSString *message = nil;
     if (isValid) {
@@ -60,13 +60,13 @@
 - (NSArray *) inputValidators {
     switch (_validatorsType) {
         case ValidatorTypeRequiredAndEmail:
-            return @[[InputValidator requiredValidator], [InputValidator emailValidator]];
+            return @[[LKRequiredInputValidator validator], [LKEmailInputValidator validator]];
             
         case ValidatorTypeRequiredAndAlpha:
-            return @[[InputValidator requiredValidator], [InputValidator alphaValidator]];
+            return @[[LKRequiredInputValidator validator], [LKAlphaInputValidator validator]];
             
         case ValidatorTypeRequiredAndNumeric:
-            return @[[InputValidator requiredValidator], [InputValidator numericValidator]];
+            return @[[LKRequiredInputValidator validator], [LKNumericInputValidator validator]];
         
         default:
             break;

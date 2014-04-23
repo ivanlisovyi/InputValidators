@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,8 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "RegularExpressionInputValidator.h"
+#import <UIKit/UIKit.h>
+#import "LKValidators.h"
 
-@interface AlphaInputValidator : RegularExpressionInputValidator
+extern NSString *const UITextFieldInvalidDependencyException;
+
+@interface UITextField (LKValidators)
+
+- (BOOL) containsValidator:(LKValidator *) aValidator;
+- (BOOL) isValid;
+
+- (void) addValidator:(LKValidator *) aValidator;
+- (void) removeValidator:(LKValidator *) aValidator;
+- (void) removeAllValidators;
+- (NSArray *) validators;
+
+- (void) validateWithDependencies:(NSError **)error;
+- (BOOL) validate:(NSError **)error;
+
+- (void) addDependency:(UITextField *) textField;
+- (void) removeDependency:(UITextField *) textField;
+- (void) removeAllDependencies;
+- (NSMutableArray *) dependencies;
+
+- (void) addDependent:(UITextField *) textField;
+- (void) removeDependent:(UITextField *) textField;
+- (void) removeAllDependents;
+- (NSArray *) dependents;
 
 @end

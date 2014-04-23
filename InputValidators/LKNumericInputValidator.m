@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,16 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "EmailInputValidator.h"
+#import "LKNumericInputValidator.h"
 
-@implementation EmailInputValidator
+@implementation LKNumericInputValidator
 
 - (id) init {
     self = [super init];
     if (self) {
-        _regularExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-        _reason = NSLocalizedString(@"Email is incorrect", @"Validator reason (Alert)");
-        _errorCode = InputValidationEmailErrorCode;
+        _regularExpression = @"^[0-9]*$";
+        _reason = NSLocalizedString(@"The input can contain only numerical values", @"Validator reason (Alert)");
+        _errorCode = InputValidationNumericErrorCode;
     }
     
     return self;

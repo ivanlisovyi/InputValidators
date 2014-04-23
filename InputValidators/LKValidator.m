@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,32 +20,36 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "LKValidator.h"
+#import "LKNumericInputValidator.h"
+#import "LKAlphaInputValidator.h"
+#import "LKEmailInputValidator.h"
+#import "LKRequiredInputValidator.h"
 
-static NSString *const InputValidationErrorDomain  = @"InputValidationErrorDomain";
-static NSInteger const InputValidationNumericErrorCode = 1001;
-static NSInteger const InputValidationAlphabetErrorCode = 1002;
-static NSInteger const InputValidationEmailErrorCode = 1003;
-static NSInteger const InputValidationRequiredErrorCode = 1004;
-static NSInteger const InputValidationMultipleErrorCode = 1100;
+@implementation LKValidator
 
++ (instancetype) validator {
+    return [[self alloc] init];
+}
 
-@protocol InputValidator <NSObject>
+#pragma mark -
+#pragma mark Validation
 
-+ (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code;
+- (BOOL) validateInput:(NSString *)input error:(NSError **)error {
+    if (error) {
+        *error = nil; 
+    }
+    
+    return NO;
+}
 
-@end
++ (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code {
+    NSString *description = NSLocalizedString(@"Input Validation Failed", @"Input Validation Failed");
+    NSDictionary *userInfo =  @{NSLocalizedDescriptionKey : description,
+                                NSLocalizedFailureReasonErrorKey : aReason};
 
-
-@interface InputValidator : NSObject <InputValidator>
-
-+ (instancetype) numericValidator;
-+ (instancetype) alphaValidator;
-+ (instancetype) emailValidator;
-+ (instancetype) requiredValidator;
-
-+ (BOOL) validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error;
-
-- (BOOL) validateInput:(NSString *)input error:(NSError **)error;
+    NSError *error = [NSError errorWithDomain:InputValidationErrorDomain code:code userInfo:userInfo];
+    return error;
+}
 
 @end

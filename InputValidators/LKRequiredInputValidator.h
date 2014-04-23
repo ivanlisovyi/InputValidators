@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,20 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AlphaInputValidator.h"
+#import "LKValidator.h"
 
-@implementation AlphaInputValidator
-
-- (id) init {
-    self = [super init];
-    
-    if (self) {
-        _regularExpression = @"^[a-zA-Z]*$";
-        _reason = NSLocalizedString(@"The input can contain only letters", @"Validator reason (Alert)");
-        _errorCode = InputValidationAlphabetErrorCode;
-    }
-    
-    return self;
-}
+@interface LKRequiredInputValidator : LKValidator
 
 @end

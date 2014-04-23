@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,11 +21,11 @@
 // THE SOFTWARE.
 
 #import <objc/runtime.h>
-#import "UITextField+InputValidator.h"
+#import "UITextField+LKValidators.h"
 
 NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDependencyException";
 
-@implementation UITextField (InputValidator)
+@implementation UITextField (LKValidators)
 
 - (void) addDependency:(UITextField *) textField {
     NSParameterAssert(textField);
@@ -110,7 +110,7 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     [self setAssociatedObject:dependents forKey:@"_dependents"];
 }
 
-- (void) addValidator:(InputValidator *) aValidator {
+- (void) addValidator:(LKValidator *) aValidator {
     NSParameterAssert(aValidator);
     
     if ([self _validators] == nil) {
@@ -123,7 +123,7 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     [[self _validators] addObject:aValidator];
 }
 
-- (BOOL) containsValidator:(InputValidator *) aValidator {
+- (BOOL) containsValidator:(LKValidator *) aValidator {
     return [[self _validators] containsObject:aValidator];
 }
 
@@ -135,7 +135,7 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     [self setAssociatedObject:validators forKey:@"_validators"];
 }
 
-- (void) removeValidator:(InputValidator *) aValidator {
+- (void) removeValidator:(LKValidator *) aValidator {
     [[self _validators] removeObject:aValidator];
 }
 
@@ -176,7 +176,7 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
 
 - (BOOL) validate:(NSError **)error {
     NSArray *validators = [self _validators];
-    BOOL isValid = [InputValidator validateInput:self.text validators:validators error:error];
+    BOOL isValid = [LKValidator validateInput:self.text validators:validators error:error];
     
     [self setIsValid:isValid];
     

@@ -10,8 +10,7 @@
 #import "ValidatorExampleViewController.h"
 #import "MultipleValidatorExampleViewController.h"
 
-#import "InputValidator.h"
-#import "UITextField+InputValidator.h"
+#import "LKValidators.h"
 
 @interface ExampleViewController ()
 

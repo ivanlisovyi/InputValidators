@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Lisovoy Ivan, Denis Kotenko
+// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,19 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NumericInputValidator.h"
+#import "LKValidator.h"
 
-@implementation NumericInputValidator
+@interface LKValidator (MultipleValidation)
 
-- (id) init {
-    self = [super init];
-    if (self) {
-        _regularExpression = @"^[0-9]*$";
-        _reason = NSLocalizedString(@"The input can contain only numerical values", @"Validator reason (Alert)");
-        _errorCode = InputValidationNumericErrorCode;
-    }
-    
-    return self;
-}
++ (BOOL) validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error;
 
 @end
