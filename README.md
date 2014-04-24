@@ -8,6 +8,7 @@ Currently available default validators:
 * Email validator
 * Alpha validator
 * Numeric validator
+* RegularExpression validator
 
 ## Requirements
 * Xcode 5.0 or higher
@@ -56,7 +57,7 @@ $ open MyProject.xcworkspace
 
 ### Manual Install
 
-All you need to do is drop `InputValidators` files into your project, and add `#import "InputValidator.h"` to the top of classes that will use it. Also if you want to add validators to the UITextField you need to add `#import "UITextField+InputValidator.h"`.
+All you need to do is drop `InputValidators` files into your project, and add `#import "LKValidators.h"` to the top of classes that will use it.
 
 ## Example Usage
 
@@ -65,7 +66,7 @@ All you need to do is drop `InputValidators` files into your project, and add `#
 ``` objective-c
 NSString *emailString = @"email@example.com"
 
-InputValidator *validator = [InputValidator emailValidator];
+InputValidator *validator = [LKEmailInputValidator validator];
 NSError *error = nil;
 BOOL isValid = [validator validateInput:emailString error:&error];
 
@@ -79,9 +80,9 @@ if (!isValid) {
 ``` objective-c
 NSString *emailString = @"email@example.com"
 
-NSArray *validators = @[[InputValidator requiredValidator], [InputValidator emailValidator]];
+NSArray *validators = @[[LKRequiredInputValidator validator], [LKEmailInputValidator validator]];
 NSError *error = nil;
-BOOL isValid = [InputValidator validateInput:emailString validators:validators error:&error];
+BOOL isValid = [LKValidator validateInput:emailString validators:validators error:&error];
 
 if (!isValid) {
   NSLog(@"%@", [error localizedFailureReason]);
