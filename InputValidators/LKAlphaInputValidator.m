@@ -28,8 +28,8 @@
     self = [super init];
     
     if (self) {
+        self.reason = NSLocalizedString(@"The input can contain only letters", @"Validator reason (Alert)");
         _regularExpression = @"^[a-zA-Z]*$";
-        _reason = NSLocalizedString(@"The input can contain only letters", @"Validator reason (Alert)");
         _errorCode = InputValidationAlphabetErrorCode;
     }
     

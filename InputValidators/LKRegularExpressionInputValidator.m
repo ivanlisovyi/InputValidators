@@ -58,7 +58,7 @@
 }
 
 - (NSError *) error {
-    return [[self class] errorWithReason:_reason code:_errorCode];
+    return [[self class] errorWithReason:self.reason code:_errorCode];
 }
 
 

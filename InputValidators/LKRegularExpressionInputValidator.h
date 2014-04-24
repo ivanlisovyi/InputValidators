@@ -25,7 +25,6 @@
 @interface LKRegularExpressionInputValidator : LKValidator {
     @protected
     NSString *_regularExpression;
-    NSString *_reason;
     NSInteger _errorCode;
 }
 

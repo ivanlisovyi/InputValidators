@@ -39,6 +39,8 @@ static NSInteger const InputValidationMultipleErrorCode = 1100;
 
 @interface LKValidator : NSObject <LKValidator>
 
+@property (nonatomic, strong) NSString *reason;
+
 + (instancetype) validator;
 
 - (BOOL) validateInput:(NSString *)input error:(NSError **)error;

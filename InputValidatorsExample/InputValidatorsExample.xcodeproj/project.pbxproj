@@ -39,6 +39,8 @@
 		808F5AF3182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */; };
 		808F5AF4182A1D3E0019CEFF /* UITextField+LKValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */; };
 		808F5AF5182A1D3E0019CEFF /* UITextField+LKValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */; };
+		80CC57741908D54000DCAEFA /* LKLengthInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */; };
+		80CC57751908D54000DCAEFA /* LKLengthInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */; };
 		80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */; };
 		80D3F918182B757700DCF7C0 /* ValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */; };
 		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
@@ -92,6 +94,8 @@
 		808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredInputValidator.m; sourceTree = "<group>"; };
 		808F5AE6182A1D3E0019CEFF /* UITextField+LKValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LKValidators.h"; sourceTree = "<group>"; };
 		808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LKValidators.m"; sourceTree = "<group>"; };
+		80CC57721908D54000DCAEFA /* LKLengthInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLengthInputValidator.h; sourceTree = "<group>"; };
+		80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthInputValidator.m; sourceTree = "<group>"; };
 		80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorExampleViewController.h; sourceTree = "<group>"; };
 		80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidatorExampleViewController.xib; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				808F5AE3182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m */,
 				808F5AE4182A1D3E0019CEFF /* LKRequiredInputValidator.h */,
 				808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */,
+				80CC57721908D54000DCAEFA /* LKLengthInputValidator.h */,
+				80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */,
 				808F5AE6182A1D3E0019CEFF /* UITextField+LKValidators.h */,
 				808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */,
 			);
@@ -328,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CC57741908D54000DCAEFA /* LKLengthInputValidator.m in Sources */,
 				80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */,
 				808F5ABA182A1D270019CEFF /* AppDelegate.m in Sources */,
 				8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
@@ -351,6 +358,7 @@
 				808F5AE9182A1D3E0019CEFF /* LKAlphaInputValidator.m in Sources */,
 				808F5AED182A1D3E0019CEFF /* LKValidator.m in Sources */,
 				808F5AEF182A1D3E0019CEFF /* LKNumericInputValidator.m in Sources */,
+				80CC57751908D54000DCAEFA /* LKLengthInputValidator.m in Sources */,
 				808F5AF3182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */,
 				80045EC119077D7100ED5BE5 /* LKValidator+MultipleValidation.m in Sources */,
 				808F5AEB182A1D3E0019CEFF /* LKEmailInputValidator.m in Sources */,

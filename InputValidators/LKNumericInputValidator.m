@@ -27,8 +27,8 @@
 - (id) init {
     self = [super init];
     if (self) {
+        self.reason = NSLocalizedString(@"The input can contain only numerical values", @"Validator reason (Alert)");
         _regularExpression = @"^[0-9]*$";
-        _reason = NSLocalizedString(@"The input can contain only numerical values", @"Validator reason (Alert)");
         _errorCode = InputValidationNumericErrorCode;
     }
     

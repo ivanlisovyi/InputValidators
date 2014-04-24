@@ -24,7 +24,6 @@
 
 @implementation LKValidator (MultipleValidation)
 
-
 + (BOOL) validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error {
     NSMutableArray *errors = [NSMutableArray array];
     for (LKValidator *validator in validators) {

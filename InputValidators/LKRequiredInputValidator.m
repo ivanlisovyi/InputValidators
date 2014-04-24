@@ -24,12 +24,21 @@
 
 @implementation LKRequiredInputValidator
 
+- (id) init {
+    self = [super init];
+    
+    if (self) {
+        self.reason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
+    }
+    
+    return self;
+}
+
 - (BOOL) validateInput:(NSString *)input error:(NSError **) error {
     NSString *text = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([text length] == 0) {
-        NSString *reason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
         if (error != nil) {
-            *error = [[self class] errorWithReason:reason code:InputValidationRequiredErrorCode];
+            *error = [[self class] errorWithReason:self.reason code:InputValidationRequiredErrorCode];
         }
         return NO;
     }
