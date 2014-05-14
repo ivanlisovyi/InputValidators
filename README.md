@@ -1,4 +1,4 @@
-# InputValidators [![Build Status](https://travis-ci.org/kshin/InputValidators.png?branch=master)](https://travis-ci.org/kshin/InputValidators) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kshin/inputvalidators/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# InputValidators [![Build Status](https://travis-ci.org/kshin/InputValidators.png?branch=master)](https://travis-ci.org/kshin/InputValidators)
 
 Simple Objective-C solution for text validation.
 
