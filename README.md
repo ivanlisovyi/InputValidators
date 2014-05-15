@@ -8,6 +8,7 @@ Currently available default validators:
 * Email validator
 * Alpha validator
 * Numeric validator
+* Length validator
 * RegularExpression validator
 
 ## Requirements
