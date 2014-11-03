@@ -1,4 +1,4 @@
-# InputValidators [![Build Status](https://travis-ci.org/kshin/InputValidators.png?branch=master)](https://travis-ci.org/kshin/InputValidators) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kshin/inputvalidators/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# InputValidators [![Build Status](https://travis-ci.org/kshin/InputValidators.png?branch=master)](https://travis-ci.org/kshin/InputValidators)
 
 Simple Objective-C solution for text validation.
 
@@ -8,6 +8,7 @@ Currently available default validators:
 * Email validator
 * Alpha validator
 * Numeric validator
+* Length validator
 * RegularExpression validator
 
 ## Requirements
@@ -40,7 +41,7 @@ $ edit Podfile
 Edit your Podfile and add InputValidators:
 
 ``` bash
-pod 'InputValidators', '~> 0.2'
+pod 'InputValidators', '~> 0.3.1'
 ```
 
 Install into your Xcode project:
