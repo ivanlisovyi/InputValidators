@@ -481,7 +481,7 @@
 				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
 				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "armv7 armv7s i386 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -495,7 +495,7 @@
 				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
 				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "armv7 armv7s i386 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
