@@ -29,25 +29,27 @@
     for (LKValidator *validator in validators) {
         NSError *error = nil;
         BOOL isValid = [validator validateInput:input error:&error];
-        
-        
+
+
         if (!isValid) {
             [errors addObject:error];
         }
     }
-    
+
     BOOL isValid = [errors count] == 0;
-    
+
     if (!isValid) {
         NSMutableString *errorMessage = [NSMutableString string];
         for (NSError *error in errors) {
             [errorMessage appendFormat:@"%@\n", [error localizedFailureReason]];
         }
         [errorMessage deleteCharactersInRange:NSMakeRange([errorMessage length] - 1, 1)];
-        
-        *error = [[self class] errorWithReason:errorMessage code:InputValidationMultipleErrorCode];
+
+        if (error) {
+          *error = [[self class] errorWithReason:errorMessage code:InputValidationMultipleErrorCode];
+        }
     }
-    
+
     return isValid;
 }
 
