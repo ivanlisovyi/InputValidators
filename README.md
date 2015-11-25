@@ -41,7 +41,7 @@ $ edit Podfile
 Edit your Podfile and add InputValidators:
 
 ``` bash
-pod 'InputValidators', '~> 0.3.2'
+pod 'InputValidators'
 ```
 
 Install into your Xcode project:
