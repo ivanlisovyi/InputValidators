@@ -36,8 +36,6 @@
 		808F5AF1182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE3182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m */; };
 		808F5AF2182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */; };
 		808F5AF3182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */; };
-		808F5AF4182A1D3E0019CEFF /* UITextField+LKValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */; };
-		808F5AF5182A1D3E0019CEFF /* UITextField+LKValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */; };
 		80CC57741908D54000DCAEFA /* LKLengthInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */; };
 		80CC57751908D54000DCAEFA /* LKLengthInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */; };
 		80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */; };
@@ -45,6 +43,7 @@
 		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
 		80D3F91D182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */; };
 		FAA7C8EB1C09D4E300110A44 /* LKValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */; };
+		FAA7C8EE1C09D91A00110A44 /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7C8ED1C09D91A00110A44 /* LKTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +90,6 @@
 		808F5AE3182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRegularExpressionInputValidator.m; sourceTree = "<group>"; };
 		808F5AE4182A1D3E0019CEFF /* LKRequiredInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRequiredInputValidator.h; sourceTree = "<group>"; };
 		808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredInputValidator.m; sourceTree = "<group>"; };
-		808F5AE6182A1D3E0019CEFF /* UITextField+LKValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LKValidators.h"; sourceTree = "<group>"; };
-		808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LKValidators.m"; sourceTree = "<group>"; };
 		80CC57721908D54000DCAEFA /* LKLengthInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLengthInputValidator.h; sourceTree = "<group>"; };
 		80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthInputValidator.m; sourceTree = "<group>"; };
 		80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorExampleViewController.h; sourceTree = "<group>"; };
@@ -102,6 +99,8 @@
 		80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleValidatorExampleViewController.xib; sourceTree = "<group>"; };
 		FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorTests.m; sourceTree = "<group>"; };
+		FAA7C8EC1C09D91A00110A44 /* LKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKTextField.h; sourceTree = "<group>"; };
+		FAA7C8ED1C09D91A00110A44 /* LKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +227,8 @@
 				808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */,
 				80CC57721908D54000DCAEFA /* LKLengthInputValidator.h */,
 				80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */,
-				808F5AE6182A1D3E0019CEFF /* UITextField+LKValidators.h */,
-				808F5AE7182A1D3E0019CEFF /* UITextField+LKValidators.m */,
+				FAA7C8EC1C09D91A00110A44 /* LKTextField.h */,
+				FAA7C8ED1C09D91A00110A44 /* LKTextField.m */,
 			);
 			name = InputValidators;
 			path = ../InputValidators;
@@ -279,8 +278,9 @@
 		808F5A9E182A1D260019CEFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IV;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Ramotion;
+				ORGANIZATIONNAME = "Ivan Lisovyi";
 				TargetAttributes = {
 					808F5AC0182A1D270019CEFF = {
 						TestTargetID = 808F5AA5182A1D270019CEFF;
@@ -336,6 +336,7 @@
 			files = (
 				80CC57741908D54000DCAEFA /* LKLengthInputValidator.m in Sources */,
 				80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */,
+				FAA7C8EE1C09D91A00110A44 /* LKTextField.m in Sources */,
 				808F5ABA182A1D270019CEFF /* AppDelegate.m in Sources */,
 				8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
 				808F5AB6182A1D270019CEFF /* main.m in Sources */,
@@ -343,7 +344,6 @@
 				80045EC019077D7100ED5BE5 /* LKValidator+MultipleValidation.m in Sources */,
 				80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */,
 				808F5AEA182A1D3E0019CEFF /* LKEmailInputValidator.m in Sources */,
-				808F5AF4182A1D3E0019CEFF /* UITextField+LKValidators.m in Sources */,
 				808F5AEE182A1D3E0019CEFF /* LKNumericInputValidator.m in Sources */,
 				808F5AE8182A1D3E0019CEFF /* LKAlphaInputValidator.m in Sources */,
 				808F5AEC182A1D3E0019CEFF /* LKValidator.m in Sources */,
@@ -365,7 +365,6 @@
 				808F5AEB182A1D3E0019CEFF /* LKEmailInputValidator.m in Sources */,
 				808F5AF1182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m in Sources */,
 				8014DCC5182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
-				808F5AF5182A1D3E0019CEFF /* UITextField+LKValidators.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +475,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
 				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";
@@ -490,7 +488,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
 				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";

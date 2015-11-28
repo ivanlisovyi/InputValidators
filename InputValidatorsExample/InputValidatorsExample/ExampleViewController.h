@@ -2,8 +2,8 @@
 //  ExampleViewController.h
 //  InputValidatorsExample
 //
-//  Created by Ivan Lisovoy on 06.11.13.
-//  Copyright (c) 2013 Ramotion. All rights reserved.
+//  Created by Ivan Lisovyi on 06.11.13.
+//  Copyright (c) 2015 Ivan Lisovyi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

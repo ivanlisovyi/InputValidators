@@ -2,16 +2,12 @@
 //  ValidatorExampleViewController.m
 //  InputValidatorsExample
 //
-//  Created by Ivan Lisovoy on 07.11.13.
-//  Copyright (c) 2013 Ramotion. All rights reserved.
+//  Created by Ivan Lisovyi on 07.11.13.
+//  Copyright (c) 2015 Ivan Lisovyi. All rights reserved.
 //
 
 #import "ValidatorExampleViewController.h"
 #import "LKValidators.h"
-
-@interface ValidatorExampleViewController ()
-
-@end
 
 @implementation ValidatorExampleViewController
 
@@ -30,10 +26,9 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark -
-#pragma mark IBActions
+#pragma mark - IBActions
 
-- (IBAction) validateBtnHandler:(id)sender {
+- (IBAction)validateBtnHandler:(id)sender {
     LKValidator *validator = [self inputValidator];
 
     NSError *error = nil;
@@ -47,17 +42,19 @@
         message = error.localizedFailureReason;
     }
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-    [alertView show];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil)
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:nil];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                             message:message
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark -
 
-- (LKValidator *) inputValidator {
+- (LKValidator *)inputValidator {
     switch (_validatorType) {
         case ValidatorTypeRequired:
             return [LKRequiredInputValidator validator];

@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
+// Copyright (c) 2015 Ivan Lisovyi
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,31 +22,35 @@
 
 #import <UIKit/UIKit.h>
 
-#import "LKValidators.h"
+NS_ASSUME_NONNULL_BEGIN
 
-extern NSString *const UITextFieldInvalidDependencyException;
+@class LKValidator;
 
-@interface UITextField (LKValidators)
+@interface LKTextField : UITextField
 
-- (BOOL)containsValidator:(LKValidator *)validator;
-- (BOOL)isValid;
+@property (nonatomic, assign, readonly, getter=isValid) BOOL valid;
+
+@property (nonatomic, strong, readonly) NSArray<LKValidator *> *validators;
+@property (nonatomic, strong, readonly) NSArray<LKTextField *> *dependencies;
+@property (nonatomic, strong, readonly) NSArray<LKTextField *> *dependents;
+
+- (BOOL)validateWithDependencies:(NSError * _Nullable *)error;
+- (BOOL)validate:(NSError * _Nullable *)error;
+
+- (BOOL)containsValidator:(LKValidator *)validator;;
 
 - (void)addValidator:(LKValidator *)validator;
 - (void)removeValidator:(LKValidator *)validator;
 - (void)removeAllValidators;
-- (NSArray *)validators;
 
-- (void)validateWithDependencies:(NSError **)error;
-- (BOOL)validate:(NSError **)error;
-
-- (void)addDependency:(UITextField *)textField;
-- (void)removeDependency:(UITextField *)textField;
+- (void)addDependency:(LKTextField *)textField;
+- (void)removeDependency:(LKTextField *)textField;
 - (void)removeAllDependencies;
-- (NSMutableArray *)dependencies;
 
-- (void)addDependent:(UITextField *)textField;
-- (void)removeDependent:(UITextField *)textField;
+- (void)addDependent:(LKTextField *)textField;
+- (void)removeDependent:(LKTextField *)textField;
 - (void)removeAllDependents;
-- (NSArray *)dependents;
 
 @end
+
+NS_ASSUME_NONNULL_END

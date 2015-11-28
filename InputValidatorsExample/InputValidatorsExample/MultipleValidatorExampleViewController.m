@@ -2,8 +2,8 @@
 //  MultipleValidatorExampleViewController.m
 //  InputValidatorsExample
 //
-//  Created by Ivan Lisovoy on 07.11.13.
-//  Copyright (c) 2013 Ramotion. All rights reserved.
+//  Created by Ivan Lisovyi on 07.11.13.
+//  Copyright (c) 2015 Ivan Lisovyi. All rights reserved.
 //
 
 #import "MultipleValidatorExampleViewController.h"
@@ -30,10 +30,9 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark -
-#pragma mark IBActions
+#pragma mark - IBActions
 
-- (IBAction) validateBtnHandler:(id)sender {
+- (IBAction)validateBtnHandler:(id)sender {
     NSArray *validators = [self inputValidators];
     
     NSError *error = nil;
@@ -47,17 +46,19 @@
         message = error.localizedFailureReason;
     }
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-    [alertView show];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil)
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:nil];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                             message:message
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark -
 
-- (NSArray *) inputValidators {
+- (NSArray *)inputValidators {
     switch (_validatorsType) {
         case ValidatorTypeRequiredAndEmail:
             return @[[LKRequiredInputValidator validator], [LKEmailInputValidator validator]];

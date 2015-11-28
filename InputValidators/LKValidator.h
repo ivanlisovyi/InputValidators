@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Ivan Lisovoy, Denis Kotenko
+// Copyright (c) 2015 Ivan Lisovyi, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +22,14 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 static NSString *const InputValidationErrorDomain  = @"InputValidationErrorDomain";
 static NSInteger const InputValidationNumericErrorCode = 1001;
 static NSInteger const InputValidationAlphabetErrorCode = 1002;
 static NSInteger const InputValidationEmailErrorCode = 1003;
 static NSInteger const InputValidationRequiredErrorCode = 1004;
 static NSInteger const InputValidationMultipleErrorCode = 1100;
-
 
 @protocol LKValidator <NSObject>
 
@@ -43,6 +44,8 @@ static NSInteger const InputValidationMultipleErrorCode = 1100;
 
 + (instancetype)validator;
 
-- (BOOL)validateInput:(NSString *)input error:(NSError **)error;
+- (BOOL)validateInput:(NSString *)input error:(NSError * _Nullable *)error;
 
 @end
+
+NS_ASSUME_NONNULL_END
