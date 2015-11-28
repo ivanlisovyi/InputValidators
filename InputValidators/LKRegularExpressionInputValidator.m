@@ -21,15 +21,12 @@
 // THE SOFTWARE.
 
 #import "LKRegularExpressionInputValidator.h"
-#import "LKRequiredInputValidator.h"
-
 
 @implementation LKRegularExpressionInputValidator
 
-#pragma mark -
-#pragma mark Validation
+#pragma mark - Validation
 
-- (BOOL) validateInput:(NSString *)input error:(NSError **)error {
+- (BOOL)validateInput:(NSString *)input error:(NSError **)error {
     NSRegularExpression *regex = [NSRegularExpression
         regularExpressionWithPattern:_regularExpression
         options:NSRegularExpressionAnchorsMatchLines error:error];
@@ -39,6 +36,7 @@
             NSString *theReason = NSLocalizedString(@"The text field doesn't contain any characters, can't validate", @"Validator reason (Alert)");
             *error = [[self class] errorWithReason:theReason code:InputValidationRequiredErrorCode];
         }
+        
         return NO;
     }
     
@@ -57,7 +55,7 @@
     return YES;
 }
 
-- (NSError *) error {
+- (NSError *)error {
     return [[self class] errorWithReason:self.reason code:_errorCode];
 }
 

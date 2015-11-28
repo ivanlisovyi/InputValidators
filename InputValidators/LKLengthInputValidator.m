@@ -8,29 +8,31 @@
 
 #import "LKLengthInputValidator.h"
 
-static NSUInteger const kKLValidatorDefaultMinLength = 5;
+static NSUInteger const LKValidatorDefaultMinLength = 5;
 
 @implementation LKLengthInputValidator
 
-- (id) init {
+- (instancetype)init {
     self = [super init];
     
     if (self) {
         self.reason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
-        self.length = kKLValidatorDefaultMinLength;
+        self.length = LKValidatorDefaultMinLength;
     }
     
     return self;
 }
 
-- (BOOL) validateInput:(NSString *)input error:(NSError **) error {
+- (BOOL)validateInput:(NSString *)input error:(NSError **) error {
     NSString *text = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([text length] < self.length) {
         if (error != nil) {
             *error = [[self class] errorWithReason:self.reason code:InputValidationRequiredErrorCode];
         }
+        
         return NO;
     }
+    
     return YES;
 }
 

@@ -32,7 +32,7 @@ static NSInteger const InputValidationMultipleErrorCode = 1100;
 
 @protocol LKValidator <NSObject>
 
-+ (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code;
++ (NSError *)errorWithReason:(NSString *)reason code:(NSInteger)code;
 
 @end
 
@@ -41,8 +41,8 @@ static NSInteger const InputValidationMultipleErrorCode = 1100;
 
 @property (nonatomic, strong) NSString *reason;
 
-+ (instancetype) validator;
++ (instancetype)validator;
 
-- (BOOL) validateInput:(NSString *)input error:(NSError **)error;
+- (BOOL)validateInput:(NSString *)input error:(NSError **)error;
 
 @end

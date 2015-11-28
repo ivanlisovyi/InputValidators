@@ -24,6 +24,6 @@
 
 @interface LKValidator (MultipleValidation)
 
-+ (BOOL) validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error;
++ (BOOL)validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error;
 
 @end

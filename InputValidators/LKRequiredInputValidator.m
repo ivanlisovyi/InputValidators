@@ -24,7 +24,7 @@
 
 @implementation LKRequiredInputValidator
 
-- (id) init {
+- (instancetype)init {
     self = [super init];
     
     if (self) {
@@ -34,14 +34,16 @@
     return self;
 }
 
-- (BOOL) validateInput:(NSString *)input error:(NSError **) error {
+- (BOOL)validateInput:(NSString *)input error:(NSError **) error {
     NSString *text = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([text length] == 0) {
         if (error != nil) {
             *error = [[self class] errorWithReason:self.reason code:InputValidationRequiredErrorCode];
         }
+        
         return NO;
     }
+    
     return YES;
 }
 

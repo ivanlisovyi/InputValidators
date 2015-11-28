@@ -21,13 +21,14 @@
 // THE SOFTWARE.
 
 #import <objc/runtime.h>
+
 #import "UITextField+LKValidators.h"
 
 NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDependencyException";
 
 @implementation UITextField (LKValidators)
 
-- (void) addDependency:(UITextField *) textField {
+- (void)addDependency:(UITextField *)textField {
     NSParameterAssert(textField);
     
     if ([self _dependencies] == nil) {
@@ -46,17 +47,17 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     [textField addDependent:self];
 }
 
-- (void) removeDependency:(UITextField *) textField {
+- (void)removeDependency:(UITextField *)textField {
     [[self _dependencies] removeObject:textField];
     [textField removeDependent:self];
 }
 
-- (void) removeAllDependencies {
+- (void)removeAllDependencies {
     [[self _dependencies] makeObjectsPerformSelector:@selector(removeDependent:) withObject:self];
     [[self _dependencies] removeAllObjects];
 }
 
-- (NSArray *) dependencies {
+- (NSArray *)dependencies {
     if ([self _dependencies] == nil) {
         return nil;
     }
@@ -66,18 +67,19 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
         [allDependencies addObjectsFromArray:[textField dependencies]];
     }
     [allDependencies addObjectsFromArray:[self _dependencies]];
+    
     return allDependencies;
 }
 
-- (NSMutableArray *) _dependencies {
+- (NSMutableArray *)_dependencies {
     return [self associatedObjectForKey:@"_dependencies"];
 }
 
-- (void) _setDependencies:(NSMutableArray *) dependencies {
+- (void)_setDependencies:(NSMutableArray *) dependencies {
     [self setAssociatedObject:dependencies forKey:@"_dependencies"];
 }
 
-- (void) addDependent:(UITextField *) textField {
+- (void)addDependent:(UITextField *)textField {
     NSParameterAssert(textField);
     
     if ([self _dependents] == nil) {
@@ -90,72 +92,72 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     [[self _dependents] addObject:textField];
 }
 
-- (void) removeDependent:(UITextField *) textField {
+- (void)removeDependent:(UITextField *)textField {
     [[self _dependents] removeObject:textField];
 }
 
-- (void) removeAllDependents {
+- (void)removeAllDependents {
     [[self _dependents] removeAllObjects];
 }
 
-- (NSArray *) dependents {
+- (NSArray *)dependents {
     return [NSArray arrayWithArray:[self _dependents]];
 }
 
-- (NSMutableArray *) _dependents {
+- (NSMutableArray *)_dependents {
     return [self associatedObjectForKey:@"_dependents"];
 }
 
-- (void) _setDependents:(NSMutableArray *) dependents {
+- (void)_setDependents:(NSMutableArray *)dependents {
     [self setAssociatedObject:dependents forKey:@"_dependents"];
 }
 
-- (void) addValidator:(LKValidator *) aValidator {
-    NSParameterAssert(aValidator);
+- (void)addValidator:(LKValidator *)validator {
+    NSParameterAssert(validator);
     
     if ([self _validators] == nil) {
         [self _setValidators:[NSMutableArray array]];
     }
     
-    if ([self containsValidator:aValidator]) {
+    if ([self containsValidator:validator]) {
         return;
     }
-    [[self _validators] addObject:aValidator];
+    [[self _validators] addObject:validator];
 }
 
-- (BOOL) containsValidator:(LKValidator *) aValidator {
-    return [[self _validators] containsObject:aValidator];
+- (BOOL)containsValidator:(LKValidator *)validator {
+    return [[self _validators] containsObject:validator];
 }
 
-- (NSMutableArray *) _validators {
+- (NSMutableArray *)_validators {
     return [self associatedObjectForKey:@"_validators"];
 }
 
-- (void) _setValidators:(NSMutableArray *) validators {
+- (void)_setValidators:(NSMutableArray *)validators {
     [self setAssociatedObject:validators forKey:@"_validators"];
 }
 
-- (void) removeValidator:(LKValidator *) aValidator {
-    [[self _validators] removeObject:aValidator];
+- (void)removeValidator:(LKValidator *)validator {
+    [[self _validators] removeObject:validator];
 }
 
-- (void) removeAllValidators {
+- (void)removeAllValidators {
     [[self _validators] removeAllObjects];
 }
 
-- (NSArray *) validators {
+- (NSArray *)validators {
     return [NSArray arrayWithArray:[self _validators]];
 }
 
-- (BOOL) isValid {
+- (BOOL)isValid {
     return [[self associatedObjectForKey:@"_isValid"] boolValue];
 }
 
-- (void) setIsValid:(BOOL) isValid {
+- (void)setIsValid:(BOOL)isValid {
     [self setAssociatedObject:@(isValid) forKey:@"_isValid"];
 }
 
-- (void) validateWithDependencies:(NSError **)error {
+- (void)validateWithDependencies:(NSError **)error {
     NSArray *array = [self dependencies];
     BOOL isDependeciesValid = YES;
     
@@ -174,7 +176,7 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     }
 }
 
-- (BOOL) validate:(NSError **)error {
+- (BOOL)validate:(NSError **)error {
     NSArray *validators = [self _validators];
     BOOL isValid = [LKValidator validateInput:self.text validators:validators error:error];
     
@@ -183,18 +185,17 @@ NSString *const UITextFieldInvalidDependencyException = @"UITextFieldInvalidDepe
     return isValid;
 }
 
-#pragma mark -
-#pragma mark runtime association
+#pragma mark - Runtime Association
 
-- (id) associatedObjectForKey:(NSString *) aKey {
-    return objc_getAssociatedObject(self, (__bridge const void *) (aKey));
+- (id)associatedObjectForKey:(NSString *)key {
+    return objc_getAssociatedObject(self, (__bridge const void *)key);
 }
 
-- (void) setAssociatedObject:(id) anObject forKey:(NSString *) aKey {
-    objc_setAssociatedObject(self, (__bridge const void *) (aKey), anObject, OBJC_ASSOCIATION_RETAIN);
+- (void)setAssociatedObject:(id)anObject forKey:(NSString *)key {
+    objc_setAssociatedObject(self, (__bridge const void *)key, anObject, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void) removeAssociatedObjects {
+- (void)removeAssociatedObjects {
     objc_removeAssociatedObjects(self);
 }
 

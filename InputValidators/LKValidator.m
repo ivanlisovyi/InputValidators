@@ -21,21 +21,16 @@
 // THE SOFTWARE.
 
 #import "LKValidator.h"
-#import "LKNumericInputValidator.h"
-#import "LKAlphaInputValidator.h"
-#import "LKEmailInputValidator.h"
-#import "LKRequiredInputValidator.h"
 
 @implementation LKValidator
 
-+ (instancetype) validator {
++ (instancetype)validator {
     return [[self alloc] init];
 }
 
-#pragma mark -
-#pragma mark Validation
+#pragma mark - Validation
 
-- (BOOL) validateInput:(NSString *)input error:(NSError **)error {
+- (BOOL)validateInput:(NSString *)input error:(NSError **)error {
     if (error) {
         *error = nil; 
     }
@@ -43,10 +38,10 @@
     return NO;
 }
 
-+ (NSError *) errorWithReason:(NSString *)aReason code:(NSInteger)code {
++ (NSError *)errorWithReason:(NSString *)reason code:(NSInteger)code {
     NSString *description = NSLocalizedString(@"Input Validation Failed", @"Input Validation Failed");
     NSDictionary *userInfo =  @{NSLocalizedDescriptionKey : description,
-                                NSLocalizedFailureReasonErrorKey : aReason};
+                                NSLocalizedFailureReasonErrorKey : reason};
 
     NSError *error = [NSError errorWithDomain:InputValidationErrorDomain code:code userInfo:userInfo];
     return error;

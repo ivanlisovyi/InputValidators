@@ -24,12 +24,11 @@
 
 @implementation LKValidator (MultipleValidation)
 
-+ (BOOL) validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error {
++ (BOOL)validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error {
     NSMutableArray *errors = [NSMutableArray array];
     for (LKValidator *validator in validators) {
         NSError *error = nil;
         BOOL isValid = [validator validateInput:input error:&error];
-
 
         if (!isValid) {
             [errors addObject:error];

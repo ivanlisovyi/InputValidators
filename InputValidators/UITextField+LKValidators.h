@@ -21,31 +21,32 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+
 #import "LKValidators.h"
 
 extern NSString *const UITextFieldInvalidDependencyException;
 
 @interface UITextField (LKValidators)
 
-- (BOOL) containsValidator:(LKValidator *) aValidator;
-- (BOOL) isValid;
+- (BOOL)containsValidator:(LKValidator *)validator;
+- (BOOL)isValid;
 
-- (void) addValidator:(LKValidator *) aValidator;
-- (void) removeValidator:(LKValidator *) aValidator;
-- (void) removeAllValidators;
-- (NSArray *) validators;
+- (void)addValidator:(LKValidator *)validator;
+- (void)removeValidator:(LKValidator *)validator;
+- (void)removeAllValidators;
+- (NSArray *)validators;
 
-- (void) validateWithDependencies:(NSError **)error;
-- (BOOL) validate:(NSError **)error;
+- (void)validateWithDependencies:(NSError **)error;
+- (BOOL)validate:(NSError **)error;
 
-- (void) addDependency:(UITextField *) textField;
-- (void) removeDependency:(UITextField *) textField;
-- (void) removeAllDependencies;
-- (NSMutableArray *) dependencies;
+- (void)addDependency:(UITextField *)textField;
+- (void)removeDependency:(UITextField *)textField;
+- (void)removeAllDependencies;
+- (NSMutableArray *)dependencies;
 
-- (void) addDependent:(UITextField *) textField;
-- (void) removeDependent:(UITextField *) textField;
-- (void) removeAllDependents;
-- (NSArray *) dependents;
+- (void)addDependent:(UITextField *)textField;
+- (void)removeDependent:(UITextField *)textField;
+- (void)removeAllDependents;
+- (NSArray *)dependents;
 
 @end
