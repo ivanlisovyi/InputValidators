@@ -20,31 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKValidator.h"
+#import "LKNumericValidator.h"
 
-@implementation LKValidator
+@implementation LKNumericValidator
 
-+ (instancetype)validator {
-    return [[self alloc] init];
-}
-
-#pragma mark - Validation
-
-- (BOOL)validateInput:(NSString *)input error:(NSError **)error {
-    if (error) {
-        *error = nil; 
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.regex = @"^[0-9]*$";
+        self.error = [LKValidatorError numericValidationError];
     }
     
-    return NO;
-}
-
-+ (NSError *)errorWithReason:(NSString *)reason code:(NSInteger)code {
-    NSString *description = NSLocalizedString(@"Input Validation Failed", @"Input Validation Failed");
-    NSDictionary *userInfo =  @{NSLocalizedDescriptionKey : description,
-                                NSLocalizedFailureReasonErrorKey : reason};
-
-    NSError *error = [NSError errorWithDomain:InputValidationErrorDomain code:code userInfo:userInfo];
-    return error;
+    return self;
 }
 
 @end

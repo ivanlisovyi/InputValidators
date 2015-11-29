@@ -20,8 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKValidator.h"
+#import "LKEmailValidator.h"
 
-@interface LKRequiredInputValidator : LKValidator
+@implementation LKEmailValidator
+
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.regex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
+        self.error = [LKValidatorError emailValidationError];
+    }
+    
+    return self;
+}
 
 @end

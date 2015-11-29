@@ -23,7 +23,6 @@
 #import "LKTextField.h"
 
 #import "LKValidator.h"
-#import "LKValidator+MultipleValidation.h"
 
 @interface LKTextField ()
 
@@ -61,10 +60,10 @@
 }
 
 - (BOOL)validate:(NSError **)error {
-    BOOL isValid = [LKValidator validateInput:self.text validators:self.validators error:error];
-    self.valid = isValid;
+//    BOOL isValid = [LKValidator validateInput:self.text validators:self.validators error:error];
+//    self.valid = isValid;
     
-    return isValid;
+    return NO; //isValid;
 }
 
 #pragma mark - Validators

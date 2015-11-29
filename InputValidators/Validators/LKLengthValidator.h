@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2015 Ivan Lisovyi, Denis Kotenko
+// Copyright (c) 2015 Ivan Lisovyi
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +22,8 @@
 
 #import "LKValidator.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@interface LKLengthValidator : LKValidator
 
-@interface LKValidator (MultipleValidation)
-
-+ (BOOL)validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError * _Nullable *)error;
+@property (nonatomic, assign) NSUInteger length;
 
 @end
-
-NS_ASSUME_NONNULL_END

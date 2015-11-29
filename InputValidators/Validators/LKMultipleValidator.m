@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2015 Ivan Lisovyi, Denis Kotenko
+// Copyright (c) 2015 Ivan Lisovyi
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,31 +20,48 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKRequiredInputValidator.h"
+#import "LKMultipleValidator.h"
 
-@implementation LKRequiredInputValidator
+@implementation LKMultipleValidator
 
 - (instancetype)init {
     self = [super init];
     
     if (self) {
-        self.reason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
+        self.error = [LKValidatorError multipleValidationError];
+        _validators = @[];
     }
     
     return self;
 }
 
-- (BOOL)validateInput:(NSString *)input error:(NSError **) error {
-    NSString *text = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if ([text length] == 0) {
-        if (error != nil) {
-            *error = [[self class] errorWithReason:self.reason code:InputValidationRequiredErrorCode];
+#pragma mark - Validation
+
+- (BOOL)validate:(NSString *)string error:(NSError **)error {
+    if (self.validators.count == 0) {
+        if (error) {
+            *error = self.error;
         }
         
         return NO;
     }
     
-    return YES;
+    NSMutableArray *errors = [NSMutableArray array];
+    for (LKValidator *validator in self.validators) {
+        NSError *error = nil;
+        [validator validate:string error:&error];
+    
+        if (error) {
+            [errors addObject:error];
+        }
+    }
+
+    BOOL isValid = [errors count] == 0;
+    if (!isValid && error) {
+        *error = [LKValidatorError multipleValidationErrorWithErrors:errors];
+    }
+
+    return isValid;
 }
 
 @end

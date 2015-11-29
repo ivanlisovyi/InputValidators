@@ -20,20 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKEmailInputValidator.h"
+#import "LKValidator.h"
 
-@implementation LKEmailInputValidator
+NS_ASSUME_NONNULL_BEGIN
 
-- (instancetype)init {
-    self = [super init];
-    
-    if (self) {
-        self.reason = NSLocalizedString(@"Email is incorrect", @"Validator reason (Alert)");
-        _regularExpression = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-        _errorCode = InputValidationEmailErrorCode;
-    }
-    
-    return self;
-}
+@interface LKRegexValidator : LKValidator
+
+@property (nonatomic, copy) NSString *regex;
 
 @end
+
+NS_ASSUME_NONNULL_END

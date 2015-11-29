@@ -32,7 +32,7 @@
     LKValidator *validator = [self inputValidator];
 
     NSError *error = nil;
-    BOOL isValid = [validator validateInput:_textField.text error:&error];
+    BOOL isValid = [validator validate:_textField.text error:&error];
     
     NSString *message = nil;
     if (isValid) {
@@ -57,16 +57,16 @@
 - (LKValidator *)inputValidator {
     switch (_validatorType) {
         case ValidatorTypeRequired:
-            return [LKRequiredInputValidator validator];
+            return [LKRequiredValidator validator];
             
         case ValidatorTypeEmail:
-            return [LKEmailInputValidator validator];
+            return [LKEmailValidator validator];
             
         case ValidatorTypeAlpha:
-            return [LKAlphaInputValidator validator];
+            return [LKAlphaValidator validator];
             
         case ValidatorTypeNumeric:
-            return [LKNumericInputValidator validator];
+            return [LKNumericValidator validator];
             
         default:
             break;

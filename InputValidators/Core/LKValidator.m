@@ -22,10 +22,20 @@
 
 #import "LKValidator.h"
 
-@interface LKRegularExpressionInputValidator : LKValidator {
-    @protected
-    NSString *_regularExpression;
-    NSInteger _errorCode;
+@implementation LKValidator
+
++ (instancetype)validator {
+    return [[self alloc] init];
+}
+
+#pragma mark - Validation
+
+- (BOOL)validate:(NSString *)string error:(NSError **)error{
+    if (error) {
+        *error = [LKValidatorError unknownValidationError];
+    }
+    
+    return NO;
 }
 
 @end

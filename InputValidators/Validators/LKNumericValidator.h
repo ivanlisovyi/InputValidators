@@ -20,20 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKNumericInputValidator.h"
+#import "LKRegexValidator.h"
 
-@implementation LKNumericInputValidator
-
-- (instancetype)init {
-    self = [super init];
-    
-    if (self) {
-        self.reason = NSLocalizedString(@"The input can contain only numerical values", @"Validator reason (Alert)");
-        _regularExpression = @"^[0-9]*$";
-        _errorCode = InputValidationNumericErrorCode;
-    }
-    
-    return self;
-}
+@interface LKNumericValidator : LKRegexValidator
 
 @end

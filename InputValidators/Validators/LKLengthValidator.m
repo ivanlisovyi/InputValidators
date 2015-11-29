@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2015 Ivan Lisovyi, Denis Kotenko
+// Copyright (c) 2015 Ivan Lisovyi
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,36 +20,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKValidator+MultipleValidation.h"
+#import "LKLengthValidator.h"
 
-@implementation LKValidator (MultipleValidation)
+static NSUInteger const LKValidatorDefaultMinLength = 5;
 
-+ (BOOL)validateInput:(NSString *)input validators:(NSArray *)validators error:(NSError **)error {
-    NSMutableArray *errors = [NSMutableArray array];
-    for (LKValidator *validator in validators) {
-        NSError *error = nil;
-        BOOL isValid = [validator validateInput:input error:&error];
+@implementation LKLengthValidator
 
-        if (!isValid) {
-            [errors addObject:error];
-        }
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.error = [LKValidatorError lengthValidationError];
+        _length = LKValidatorDefaultMinLength;
     }
+    
+    return self;
+}
 
-    BOOL isValid = [errors count] == 0;
-
-    if (!isValid) {
-        NSMutableString *errorMessage = [NSMutableString string];
-        for (NSError *error in errors) {
-            [errorMessage appendFormat:@"%@\n", [error localizedFailureReason]];
+- (BOOL)validate:(NSString *)string error:(NSError **) error {
+    NSString *text = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (text.length < self.length) {
+        if (error != nil) {
+            *error = self.error;
         }
-        [errorMessage deleteCharactersInRange:NSMakeRange([errorMessage length] - 1, 1)];
-
-        if (error) {
-          *error = [[self class] errorWithReason:errorMessage code:InputValidationMultipleErrorCode];
-        }
+        
+        return NO;
     }
-
-    return isValid;
+    
+    return YES;
 }
 
 @end

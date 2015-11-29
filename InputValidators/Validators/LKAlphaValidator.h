@@ -20,32 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "LKRegexValidator.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-static NSString *const InputValidationErrorDomain  = @"InputValidationErrorDomain";
-static NSInteger const InputValidationNumericErrorCode = 1001;
-static NSInteger const InputValidationAlphabetErrorCode = 1002;
-static NSInteger const InputValidationEmailErrorCode = 1003;
-static NSInteger const InputValidationRequiredErrorCode = 1004;
-static NSInteger const InputValidationMultipleErrorCode = 1100;
-
-@protocol LKValidator <NSObject>
-
-+ (NSError *)errorWithReason:(NSString *)reason code:(NSInteger)code;
+@interface LKAlphaValidator : LKRegexValidator
 
 @end
-
-
-@interface LKValidator : NSObject <LKValidator>
-
-@property (nonatomic, strong) NSString *reason;
-
-+ (instancetype)validator;
-
-- (BOOL)validateInput:(NSString *)input error:(NSError * _Nullable *)error;
-
-@end
-
-NS_ASSUME_NONNULL_END

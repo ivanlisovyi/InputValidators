@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2015 Ivan Lisovyi
+// Copyright (c) 2015 Ivan Lisovyi, Denis Kotenko
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,10 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKValidator.h"
+#import "LKAlphaValidator.h"
 
-@interface LKLengthInputValidator : LKValidator
+@implementation LKAlphaValidator
 
-@property (nonatomic, assign) NSUInteger length;
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.regex = @"^[a-zA-Z]*$";
+        self.error = [LKValidatorError alphaValidationError];
+    }
+    
+    return self;
+}
 
 @end

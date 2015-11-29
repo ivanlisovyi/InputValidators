@@ -33,10 +33,10 @@
 #pragma mark - IBActions
 
 - (IBAction)validateBtnHandler:(id)sender {
-    NSArray *validators = [self inputValidators];
-    
     NSError *error = nil;
-    BOOL isValid = [LKValidator validateInput:_textField.text validators:validators error:&error];
+    LKMultipleValidator *validator = [LKMultipleValidator validator];
+    validator.validators = [self inputValidators];
+    BOOL isValid = [validator validate:self.textField.text error:&error];
     
     NSString *message = nil;
     if (isValid) {
@@ -61,13 +61,13 @@
 - (NSArray *)inputValidators {
     switch (_validatorsType) {
         case ValidatorTypeRequiredAndEmail:
-            return @[[LKRequiredInputValidator validator], [LKEmailInputValidator validator]];
+            return @[[LKRequiredValidator validator], [LKEmailValidator validator]];
             
         case ValidatorTypeRequiredAndAlpha:
-            return @[[LKRequiredInputValidator validator], [LKAlphaInputValidator validator]];
+            return @[[LKRequiredValidator validator], [LKAlphaValidator validator]];
             
         case ValidatorTypeRequiredAndNumeric:
-            return @[[LKRequiredInputValidator validator], [LKNumericInputValidator validator]];
+            return @[[LKRequiredValidator validator], [LKNumericValidator validator]];
         
         default:
             break;

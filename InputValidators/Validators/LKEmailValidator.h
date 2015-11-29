@@ -20,12 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKAlphaValidator.h"
-#import "LKEmailValidator.h"
-#import "LKNumericValidator.h"
 #import "LKRegexValidator.h"
-#import "LKRequiredValidator.h"
-#import "LKLengthValidator.h"
-#import "LKMultipleValidator.h"
 
-#import "LKTextField.h"
+@interface LKEmailValidator : LKRegexValidator
+
+@end

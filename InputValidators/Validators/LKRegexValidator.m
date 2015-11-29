@@ -20,44 +20,39 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKRegularExpressionInputValidator.h"
+#import "LKRegexValidator.h"
 
-@implementation LKRegularExpressionInputValidator
+@implementation LKRegexValidator
+
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.error = [LKValidatorError regexValidationError];
+    }
+    
+    return self;
+}
 
 #pragma mark - Validation
 
-- (BOOL)validateInput:(NSString *)input error:(NSError **)error {
-    NSRegularExpression *regex = [NSRegularExpression
-        regularExpressionWithPattern:_regularExpression
-        options:NSRegularExpressionAnchorsMatchLines error:error];
-    
-    if ([input length] == 0) {
-        if (error != nil) {
-            NSString *theReason = NSLocalizedString(@"The text field doesn't contain any characters, can't validate", @"Validator reason (Alert)");
-            *error = [[self class] errorWithReason:theReason code:InputValidationRequiredErrorCode];
+- (BOOL)validate:(NSString *)text error:(NSError **)error {
+    if (text.length == 0) {
+        if (error) {
+            *error = self.error;
         }
-        
-        return NO;
     }
     
-    NSUInteger numberOfMatches = [regex numberOfMatchesInString:input
-                                                        options:NSMatchingAnchored
-                                                          range:NSMakeRange(0, [input length])];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.regex];
+    BOOL valid = [predicate evaluateWithObject:text];
     
-    if (numberOfMatches == 0) {
-        if (error != nil) {
-            *error = [self error];
+    if (!valid) {
+        if (error) {
+            *error = self.error;
         }
-        
-        return NO;
     }
     
-    return YES;
+    return valid;
 }
-
-- (NSError *)error {
-    return [[self class] errorWithReason:self.reason code:_errorCode];
-}
-
 
 @end

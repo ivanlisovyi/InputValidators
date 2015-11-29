@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80045EC019077D7100ED5BE5 /* LKValidator+MultipleValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80045EBF19077D7100ED5BE5 /* LKValidator+MultipleValidation.m */; };
-		80045EC119077D7100ED5BE5 /* LKValidator+MultipleValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80045EBF19077D7100ED5BE5 /* LKValidator+MultipleValidation.m */; };
 		8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */; };
 		8014DCC5182A20DC0084F0B9 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */; };
 		8014DCC6182A20DC0084F0B9 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */; };
@@ -24,26 +22,22 @@
 		808F5AC4182A1D270019CEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AA9182A1D270019CEFF /* Foundation.framework */; };
 		808F5AC5182A1D270019CEFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AAD182A1D270019CEFF /* UIKit.framework */; };
 		808F5ACD182A1D270019CEFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 808F5ACB182A1D270019CEFF /* InfoPlist.strings */; };
-		808F5AE8182A1D3E0019CEFF /* LKAlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADA182A1D3E0019CEFF /* LKAlphaInputValidator.m */; };
-		808F5AE9182A1D3E0019CEFF /* LKAlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADA182A1D3E0019CEFF /* LKAlphaInputValidator.m */; };
-		808F5AEA182A1D3E0019CEFF /* LKEmailInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADC182A1D3E0019CEFF /* LKEmailInputValidator.m */; };
-		808F5AEB182A1D3E0019CEFF /* LKEmailInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADC182A1D3E0019CEFF /* LKEmailInputValidator.m */; };
-		808F5AEC182A1D3E0019CEFF /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADE182A1D3E0019CEFF /* LKValidator.m */; };
-		808F5AED182A1D3E0019CEFF /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5ADE182A1D3E0019CEFF /* LKValidator.m */; };
-		808F5AEE182A1D3E0019CEFF /* LKNumericInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE1182A1D3E0019CEFF /* LKNumericInputValidator.m */; };
-		808F5AEF182A1D3E0019CEFF /* LKNumericInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE1182A1D3E0019CEFF /* LKNumericInputValidator.m */; };
-		808F5AF0182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE3182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m */; };
-		808F5AF1182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE3182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m */; };
-		808F5AF2182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */; };
-		808F5AF3182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */; };
-		80CC57741908D54000DCAEFA /* LKLengthInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */; };
-		80CC57751908D54000DCAEFA /* LKLengthInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */; };
 		80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */; };
 		80D3F918182B757700DCF7C0 /* ValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */; };
 		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
 		80D3F91D182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */; };
+		FA1559941C0B7F07009C7F2B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */; };
+		FAA51E4F1C0B960200881BFA /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E391C0B960200881BFA /* LKValidator.m */; };
+		FAA51E501C0B960200881BFA /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3B1C0B960200881BFA /* LKValidatorError.m */; };
+		FAA51E511C0B960200881BFA /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3F1C0B960200881BFA /* LKTextField.m */; };
+		FAA51E521C0B960200881BFA /* LKAlphaValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E421C0B960200881BFA /* LKAlphaValidator.m */; };
+		FAA51E531C0B960200881BFA /* LKEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E441C0B960200881BFA /* LKEmailValidator.m */; };
+		FAA51E541C0B960200881BFA /* LKLengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E461C0B960200881BFA /* LKLengthValidator.m */; };
+		FAA51E551C0B960200881BFA /* LKMultipleValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E481C0B960200881BFA /* LKMultipleValidator.m */; };
+		FAA51E561C0B960200881BFA /* LKNumericValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4A1C0B960200881BFA /* LKNumericValidator.m */; };
+		FAA51E571C0B960200881BFA /* LKRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4C1C0B960200881BFA /* LKRegexValidator.m */; };
+		FAA51E581C0B960200881BFA /* LKRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4E1C0B960200881BFA /* LKRequiredValidator.m */; };
 		FAA7C8EB1C09D4E300110A44 /* LKValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */; };
-		FAA7C8EE1C09D91A00110A44 /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7C8ED1C09D91A00110A44 /* LKTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		80045EBE19077D7100ED5BE5 /* LKValidator+MultipleValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LKValidator+MultipleValidation.h"; sourceTree = "<group>"; };
-		80045EBF19077D7100ED5BE5 /* LKValidator+MultipleValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LKValidator+MultipleValidation.m"; sourceTree = "<group>"; };
-		80045EC219077DFB00ED5BE5 /* LKValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidators.h; sourceTree = "<group>"; };
 		8014DCC1182A20DC0084F0B9 /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
 		8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 		8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
@@ -78,29 +69,35 @@
 		808F5AC2182A1D270019CEFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		808F5ACA182A1D270019CEFF /* InputValidatorsExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InputValidatorsExampleTests-Info.plist"; sourceTree = "<group>"; };
 		808F5ACC182A1D270019CEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		808F5AD9182A1D3E0019CEFF /* LKAlphaInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAlphaInputValidator.h; sourceTree = "<group>"; };
-		808F5ADA182A1D3E0019CEFF /* LKAlphaInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAlphaInputValidator.m; sourceTree = "<group>"; };
-		808F5ADB182A1D3E0019CEFF /* LKEmailInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKEmailInputValidator.h; sourceTree = "<group>"; };
-		808F5ADC182A1D3E0019CEFF /* LKEmailInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKEmailInputValidator.m; sourceTree = "<group>"; };
-		808F5ADD182A1D3E0019CEFF /* LKValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidator.h; sourceTree = "<group>"; };
-		808F5ADE182A1D3E0019CEFF /* LKValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidator.m; sourceTree = "<group>"; };
-		808F5AE0182A1D3E0019CEFF /* LKNumericInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNumericInputValidator.h; sourceTree = "<group>"; };
-		808F5AE1182A1D3E0019CEFF /* LKNumericInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNumericInputValidator.m; sourceTree = "<group>"; };
-		808F5AE2182A1D3E0019CEFF /* LKRegularExpressionInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRegularExpressionInputValidator.h; sourceTree = "<group>"; };
-		808F5AE3182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRegularExpressionInputValidator.m; sourceTree = "<group>"; };
-		808F5AE4182A1D3E0019CEFF /* LKRequiredInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRequiredInputValidator.h; sourceTree = "<group>"; };
-		808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredInputValidator.m; sourceTree = "<group>"; };
-		80CC57721908D54000DCAEFA /* LKLengthInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLengthInputValidator.h; sourceTree = "<group>"; };
-		80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthInputValidator.m; sourceTree = "<group>"; };
 		80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorExampleViewController.h; sourceTree = "<group>"; };
 		80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidatorExampleViewController.xib; sourceTree = "<group>"; };
 		80D3F919182B848D00DCF7C0 /* MultipleValidatorExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleValidatorExampleViewController.h; sourceTree = "<group>"; };
 		80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleValidatorExampleViewController.xib; sourceTree = "<group>"; };
+		FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FAA51E381C0B960200881BFA /* LKValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidator.h; sourceTree = "<group>"; };
+		FAA51E391C0B960200881BFA /* LKValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidator.m; sourceTree = "<group>"; };
+		FAA51E3A1C0B960200881BFA /* LKValidatorError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidatorError.h; sourceTree = "<group>"; };
+		FAA51E3B1C0B960200881BFA /* LKValidatorError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorError.m; sourceTree = "<group>"; };
+		FAA51E3C1C0B960200881BFA /* LKValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidators.h; sourceTree = "<group>"; };
+		FAA51E3E1C0B960200881BFA /* LKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKTextField.h; sourceTree = "<group>"; };
+		FAA51E3F1C0B960200881BFA /* LKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextField.m; sourceTree = "<group>"; };
+		FAA51E411C0B960200881BFA /* LKAlphaValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAlphaValidator.h; sourceTree = "<group>"; };
+		FAA51E421C0B960200881BFA /* LKAlphaValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAlphaValidator.m; sourceTree = "<group>"; };
+		FAA51E431C0B960200881BFA /* LKEmailValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKEmailValidator.h; sourceTree = "<group>"; };
+		FAA51E441C0B960200881BFA /* LKEmailValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKEmailValidator.m; sourceTree = "<group>"; };
+		FAA51E451C0B960200881BFA /* LKLengthValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLengthValidator.h; sourceTree = "<group>"; };
+		FAA51E461C0B960200881BFA /* LKLengthValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthValidator.m; sourceTree = "<group>"; };
+		FAA51E471C0B960200881BFA /* LKMultipleValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKMultipleValidator.h; sourceTree = "<group>"; };
+		FAA51E481C0B960200881BFA /* LKMultipleValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKMultipleValidator.m; sourceTree = "<group>"; };
+		FAA51E491C0B960200881BFA /* LKNumericValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNumericValidator.h; sourceTree = "<group>"; };
+		FAA51E4A1C0B960200881BFA /* LKNumericValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNumericValidator.m; sourceTree = "<group>"; };
+		FAA51E4B1C0B960200881BFA /* LKRegexValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRegexValidator.h; sourceTree = "<group>"; };
+		FAA51E4C1C0B960200881BFA /* LKRegexValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRegexValidator.m; sourceTree = "<group>"; };
+		FAA51E4D1C0B960200881BFA /* LKRequiredValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRequiredValidator.h; sourceTree = "<group>"; };
+		FAA51E4E1C0B960200881BFA /* LKRequiredValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredValidator.m; sourceTree = "<group>"; };
 		FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorTests.m; sourceTree = "<group>"; };
-		FAA7C8EC1C09D91A00110A44 /* LKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKTextField.h; sourceTree = "<group>"; };
-		FAA7C8ED1C09D91A00110A44 /* LKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +127,7 @@
 		808F5A9D182A1D260019CEFF = {
 			isa = PBXGroup;
 			children = (
-				808F5AD8182A1D3E0019CEFF /* InputValidators */,
+				FAA51E361C0B960200881BFA /* InputValidators */,
 				808F5AAF182A1D270019CEFF /* InputValidatorsExample */,
 				808F5AC8182A1D270019CEFF /* InputValidatorsExampleTests */,
 				808F5AA8182A1D270019CEFF /* Frameworks */,
@@ -161,19 +158,20 @@
 		808F5AAF182A1D270019CEFF /* InputValidatorsExample */ = {
 			isa = PBXGroup;
 			children = (
+				808F5AB0182A1D270019CEFF /* Supporting Files */,
 				808F5AB8182A1D270019CEFF /* AppDelegate.h */,
 				808F5AB9182A1D270019CEFF /* AppDelegate.m */,
 				8014DCC1182A20DC0084F0B9 /* ExampleViewController.h */,
 				8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */,
 				8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */,
-				80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */,
-				80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */,
-				80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */,
+				808F5ABB182A1D270019CEFF /* Images.xcassets */,
+				FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */,
 				80D3F919182B848D00DCF7C0 /* MultipleValidatorExampleViewController.h */,
 				80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */,
 				80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */,
-				808F5ABB182A1D270019CEFF /* Images.xcassets */,
-				808F5AB0182A1D270019CEFF /* Supporting Files */,
+				80D3F914182B757700DCF7C0 /* ValidatorExampleViewController.h */,
+				80D3F915182B757700DCF7C0 /* ValidatorExampleViewController.m */,
+				80D3F916182B757700DCF7C0 /* ValidatorExampleViewController.xib */,
 			);
 			path = InputValidatorsExample;
 			sourceTree = "<group>";
@@ -181,19 +179,19 @@
 		808F5AB0182A1D270019CEFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				808F5AB1182A1D270019CEFF /* InputValidatorsExample-Info.plist */,
 				808F5AB2182A1D270019CEFF /* InfoPlist.strings */,
-				808F5AB5182A1D270019CEFF /* main.m */,
+				808F5AB1182A1D270019CEFF /* InputValidatorsExample-Info.plist */,
 				808F5AB7182A1D270019CEFF /* InputValidatorsExample-Prefix.pch */,
+				808F5AB5182A1D270019CEFF /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		808F5AC8182A1D270019CEFF /* InputValidatorsExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */,
 				808F5AC9182A1D270019CEFF /* Supporting Files */,
+				FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */,
 			);
 			path = InputValidatorsExampleTests;
 			sourceTree = "<group>";
@@ -201,37 +199,63 @@
 		808F5AC9182A1D270019CEFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				808F5ACA182A1D270019CEFF /* InputValidatorsExampleTests-Info.plist */,
 				808F5ACB182A1D270019CEFF /* InfoPlist.strings */,
+				808F5ACA182A1D270019CEFF /* InputValidatorsExampleTests-Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		808F5AD8182A1D3E0019CEFF /* InputValidators */ = {
+		FAA51E361C0B960200881BFA /* InputValidators */ = {
 			isa = PBXGroup;
 			children = (
-				80045EC219077DFB00ED5BE5 /* LKValidators.h */,
-				808F5AD9182A1D3E0019CEFF /* LKAlphaInputValidator.h */,
-				808F5ADA182A1D3E0019CEFF /* LKAlphaInputValidator.m */,
-				808F5ADB182A1D3E0019CEFF /* LKEmailInputValidator.h */,
-				808F5ADC182A1D3E0019CEFF /* LKEmailInputValidator.m */,
-				808F5ADD182A1D3E0019CEFF /* LKValidator.h */,
-				808F5ADE182A1D3E0019CEFF /* LKValidator.m */,
-				80045EBE19077D7100ED5BE5 /* LKValidator+MultipleValidation.h */,
-				80045EBF19077D7100ED5BE5 /* LKValidator+MultipleValidation.m */,
-				808F5AE0182A1D3E0019CEFF /* LKNumericInputValidator.h */,
-				808F5AE1182A1D3E0019CEFF /* LKNumericInputValidator.m */,
-				808F5AE2182A1D3E0019CEFF /* LKRegularExpressionInputValidator.h */,
-				808F5AE3182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m */,
-				808F5AE4182A1D3E0019CEFF /* LKRequiredInputValidator.h */,
-				808F5AE5182A1D3E0019CEFF /* LKRequiredInputValidator.m */,
-				80CC57721908D54000DCAEFA /* LKLengthInputValidator.h */,
-				80CC57731908D54000DCAEFA /* LKLengthInputValidator.m */,
-				FAA7C8EC1C09D91A00110A44 /* LKTextField.h */,
-				FAA7C8ED1C09D91A00110A44 /* LKTextField.m */,
+				FAA51E3C1C0B960200881BFA /* LKValidators.h */,
+				FAA51E371C0B960200881BFA /* Core */,
+				FAA51E3D1C0B960200881BFA /* UI */,
+				FAA51E401C0B960200881BFA /* Validators */,
 			);
 			name = InputValidators;
 			path = ../InputValidators;
+			sourceTree = "<group>";
+		};
+		FAA51E371C0B960200881BFA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FAA51E381C0B960200881BFA /* LKValidator.h */,
+				FAA51E391C0B960200881BFA /* LKValidator.m */,
+				FAA51E3A1C0B960200881BFA /* LKValidatorError.h */,
+				FAA51E3B1C0B960200881BFA /* LKValidatorError.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FAA51E3D1C0B960200881BFA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FAA51E3E1C0B960200881BFA /* LKTextField.h */,
+				FAA51E3F1C0B960200881BFA /* LKTextField.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FAA51E401C0B960200881BFA /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				FAA51E411C0B960200881BFA /* LKAlphaValidator.h */,
+				FAA51E421C0B960200881BFA /* LKAlphaValidator.m */,
+				FAA51E431C0B960200881BFA /* LKEmailValidator.h */,
+				FAA51E441C0B960200881BFA /* LKEmailValidator.m */,
+				FAA51E451C0B960200881BFA /* LKLengthValidator.h */,
+				FAA51E461C0B960200881BFA /* LKLengthValidator.m */,
+				FAA51E471C0B960200881BFA /* LKMultipleValidator.h */,
+				FAA51E481C0B960200881BFA /* LKMultipleValidator.m */,
+				FAA51E491C0B960200881BFA /* LKNumericValidator.h */,
+				FAA51E4A1C0B960200881BFA /* LKNumericValidator.m */,
+				FAA51E4B1C0B960200881BFA /* LKRegexValidator.h */,
+				FAA51E4C1C0B960200881BFA /* LKRegexValidator.m */,
+				FAA51E4D1C0B960200881BFA /* LKRequiredValidator.h */,
+				FAA51E4E1C0B960200881BFA /* LKRequiredValidator.m */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +303,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IV;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Ivan Lisovyi";
 				TargetAttributes = {
 					808F5AC0182A1D270019CEFF = {
@@ -310,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1559941C0B7F07009C7F2B /* Launch Screen.storyboard in Resources */,
 				80D3F918182B757700DCF7C0 /* ValidatorExampleViewController.xib in Resources */,
 				808F5AB4182A1D270019CEFF /* InfoPlist.strings in Resources */,
 				8014DCC6182A20DC0084F0B9 /* ExampleViewController.xib in Resources */,
@@ -334,20 +359,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80CC57741908D54000DCAEFA /* LKLengthInputValidator.m in Sources */,
+				FAA51E561C0B960200881BFA /* LKNumericValidator.m in Sources */,
+				FAA51E511C0B960200881BFA /* LKTextField.m in Sources */,
+				FAA51E551C0B960200881BFA /* LKMultipleValidator.m in Sources */,
 				80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */,
-				FAA7C8EE1C09D91A00110A44 /* LKTextField.m in Sources */,
+				FAA51E531C0B960200881BFA /* LKEmailValidator.m in Sources */,
+				FAA51E581C0B960200881BFA /* LKRequiredValidator.m in Sources */,
 				808F5ABA182A1D270019CEFF /* AppDelegate.m in Sources */,
+				FAA51E501C0B960200881BFA /* LKValidatorError.m in Sources */,
 				8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
+				FAA51E4F1C0B960200881BFA /* LKValidator.m in Sources */,
+				FAA51E541C0B960200881BFA /* LKLengthValidator.m in Sources */,
+				FAA51E521C0B960200881BFA /* LKAlphaValidator.m in Sources */,
 				808F5AB6182A1D270019CEFF /* main.m in Sources */,
-				808F5AF2182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */,
-				80045EC019077D7100ED5BE5 /* LKValidator+MultipleValidation.m in Sources */,
 				80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */,
-				808F5AEA182A1D3E0019CEFF /* LKEmailInputValidator.m in Sources */,
-				808F5AEE182A1D3E0019CEFF /* LKNumericInputValidator.m in Sources */,
-				808F5AE8182A1D3E0019CEFF /* LKAlphaInputValidator.m in Sources */,
-				808F5AEC182A1D3E0019CEFF /* LKValidator.m in Sources */,
-				808F5AF0182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m in Sources */,
+				FAA51E571C0B960200881BFA /* LKRegexValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,15 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808F5AE9182A1D3E0019CEFF /* LKAlphaInputValidator.m in Sources */,
-				808F5AED182A1D3E0019CEFF /* LKValidator.m in Sources */,
-				808F5AEF182A1D3E0019CEFF /* LKNumericInputValidator.m in Sources */,
-				80CC57751908D54000DCAEFA /* LKLengthInputValidator.m in Sources */,
 				FAA7C8EB1C09D4E300110A44 /* LKValidatorTests.m in Sources */,
-				808F5AF3182A1D3E0019CEFF /* LKRequiredInputValidator.m in Sources */,
-				80045EC119077D7100ED5BE5 /* LKValidator+MultipleValidation.m in Sources */,
-				808F5AEB182A1D3E0019CEFF /* LKEmailInputValidator.m in Sources */,
-				808F5AF1182A1D3E0019CEFF /* LKRegularExpressionInputValidator.m in Sources */,
 				8014DCC5182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +403,7 @@
 				808F5AB3182A1D270019CEFF /* en */,
 			);
 			name = InfoPlist.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 		808F5ACB182A1D270019CEFF /* InfoPlist.strings */ = {
@@ -393,6 +412,7 @@
 				808F5ACC182A1D270019CEFF /* en */,
 			);
 			name = InfoPlist.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -416,6 +436,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -475,9 +496,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
-				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";
+				GCC_PREFIX_HEADER = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Prefix.pch";
+				INFOPLIST_FILE = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ramotion.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s i386 arm64";
 				WRAPPER_EXTENSION = app;
@@ -488,9 +511,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
-				INFOPLIST_FILE = "InputValidatorsExample/InputValidatorsExample-Info.plist";
+				GCC_PREFIX_HEADER = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Prefix.pch";
+				INFOPLIST_FILE = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ramotion.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s i386 arm64";
 				WRAPPER_EXTENSION = app;
@@ -507,12 +532,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
+				GCC_PREFIX_HEADER = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "InputValidatorsExampleTests/InputValidatorsExampleTests-Info.plist";
+				INFOPLIST_FILE = "InputValidatorsExampleTests/Supporting Files/InputValidatorsExampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ramotion.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -529,8 +555,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "InputValidatorsExample/InputValidatorsExample-Prefix.pch";
-				INFOPLIST_FILE = "InputValidatorsExampleTests/InputValidatorsExampleTests-Info.plist";
+				GCC_PREFIX_HEADER = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Prefix.pch";
+				INFOPLIST_FILE = "InputValidatorsExampleTests/Supporting Files/InputValidatorsExampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ramotion.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

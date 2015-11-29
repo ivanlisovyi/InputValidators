@@ -19,35 +19,39 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+#import <Foundation/Foundation.h>
 
-#import "LKLengthInputValidator.h"
+NS_ASSUME_NONNULL_BEGIN
 
-static NSUInteger const LKValidatorDefaultMinLength = 5;
+FOUNDATION_EXPORT NSString * const LKValidatorErrorDomain;
 
-@implementation LKLengthInputValidator
+typedef NS_ENUM(NSInteger, LKValidatorErrorCode) {
+    LKValidatorUnknownErrorCode = 1000,
+    LKValidatorNumericErrorCode = 1001,
+    LKValidatorAlphaErrorCode = 1002,
+    LKValidatorEmailErrorCode = 1003,
+    LKValidatorRequiredErrorCode = 1004,
+    LKValidatorLengthErrorCode = 1005,
+    LKValidatorRegexErrorCode = 1006,
+    LKValidatorMultipleErrorCode = 1100
+};
 
-- (instancetype)init {
-    self = [super init];
-    
-    if (self) {
-        self.reason = NSLocalizedString(@"The text field can't not be empty.", @"Validator reason (Alert)");
-        self.length = LKValidatorDefaultMinLength;
-    }
-    
-    return self;
-}
+@interface LKValidatorError : NSError
 
-- (BOOL)validateInput:(NSString *)input error:(NSError **) error {
-    NSString *text = [input stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if ([text length] < self.length) {
-        if (error != nil) {
-            *error = [[self class] errorWithReason:self.reason code:InputValidationRequiredErrorCode];
-        }
-        
-        return NO;
-    }
-    
-    return YES;
-}
++ (instancetype)unknownValidationError;
++ (instancetype)numericValidationError;
++ (instancetype)alphaValidationError;
++ (instancetype)emailValidationError;
++ (instancetype)requiredValidationError;
++ (instancetype)lengthValidationError;
++ (instancetype)regexValidationError;
+
++ (instancetype)multipleValidationError;
++ (instancetype)multipleValidationErrorWithErrors:(NSArray<LKValidatorError *> *)errors;
+
++ (instancetype)errorWithCode:(LKValidatorErrorCode)code;
++ (instancetype)errorWithCode:(LKValidatorErrorCode)code reason:(nullable NSString *)reason;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -20,8 +20,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKRegularExpressionInputValidator.h"
+#import <Foundation/Foundation.h>
 
-@interface LKNumericInputValidator : LKRegularExpressionInputValidator
+#import "LKValidatorError.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface LKValidator : NSObject
+
+@property (nonatomic, strong) LKValidatorError *error;
+
++ (instancetype)validator;
+
+- (BOOL)validate:(NSString *)string error:(NSError * _Nullable * _Nullable)error;
 
 @end
+
+NS_ASSUME_NONNULL_END

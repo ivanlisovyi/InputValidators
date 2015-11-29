@@ -20,20 +20,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LKAlphaInputValidator.h"
+#import "LKRequiredValidator.h"
 
-@implementation LKAlphaInputValidator
+@implementation LKRequiredValidator
 
 - (instancetype)init {
     self = [super init];
     
     if (self) {
-        self.reason = NSLocalizedString(@"The input can contain only letters", @"Validator reason (Alert)");
-        _regularExpression = @"^[a-zA-Z]*$";
-        _errorCode = InputValidationAlphabetErrorCode;
+        self.error = [LKValidatorError requiredValidationError];
     }
     
     return self;
+}
+
+- (BOOL)validate:(NSString *)string error:(NSError **) error {
+    NSString *text = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (text.length == 0) {
+        if (error != nil) {
+            *error = self.error;
+        }
+        
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
