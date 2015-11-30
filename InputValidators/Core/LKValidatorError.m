@@ -55,7 +55,7 @@ NSString * const LKValidatorErrorDomain = @"InputValidationErrorDomain";
 }
 
 + (instancetype)multipleValidationError {
-    return [self errorWithCode:LKValidatorRegexErrorCode];
+    return [self errorWithCode:LKValidatorMultipleErrorCode];
 }
 
 + (instancetype)multipleValidationErrorWithErrors:(NSArray<LKValidatorError *> *)errors {
@@ -66,10 +66,11 @@ NSString * const LKValidatorErrorDomain = @"InputValidationErrorDomain";
     }
     
     if (result.length > 0) {
-        [result deleteCharactersInRange:NSMakeRange(result.length - 1, 1)];
+        NSCharacterSet *characterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+        result = [[result stringByTrimmingCharactersInSet:characterSet] copy];
     }
     
-    return [self errorWithCode:LKValidatorMultipleErrorCode reason:[result copy]];
+    return [self errorWithCode:LKValidatorMultipleErrorCode reason:result];
 }
 
 + (instancetype)errorWithCode:(LKValidatorErrorCode)code {

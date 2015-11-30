@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */; };
-		8014DCC5182A20DC0084F0B9 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014DCC2182A20DC0084F0B9 /* ExampleViewController.m */; };
 		8014DCC6182A20DC0084F0B9 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */; };
 		8014DCC7182A20DC0084F0B9 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8014DCC3182A20DC0084F0B9 /* ExampleViewController.xib */; };
 		808F5AAA182A1D270019CEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F5AA9182A1D270019CEFF /* Foundation.framework */; };
@@ -27,6 +26,8 @@
 		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
 		80D3F91D182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */; };
 		FA1559941C0B7F07009C7F2B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */; };
+		FA95DA0A1C0CD77B003C8982 /* LKValidatorErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */; };
+		FA95DA0D1C0CD8C0003C8982 /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3B1C0B960200881BFA /* LKValidatorError.m */; };
 		FAA51E4F1C0B960200881BFA /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E391C0B960200881BFA /* LKValidator.m */; };
 		FAA51E501C0B960200881BFA /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3B1C0B960200881BFA /* LKValidatorError.m */; };
 		FAA51E511C0B960200881BFA /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3F1C0B960200881BFA /* LKTextField.m */; };
@@ -76,6 +77,7 @@
 		80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleValidatorExampleViewController.xib; sourceTree = "<group>"; };
 		FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorErrorTests.m; sourceTree = "<group>"; };
 		FAA51E381C0B960200881BFA /* LKValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidator.h; sourceTree = "<group>"; };
 		FAA51E391C0B960200881BFA /* LKValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidator.m; sourceTree = "<group>"; };
 		FAA51E3A1C0B960200881BFA /* LKValidatorError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidatorError.h; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				808F5AC9182A1D270019CEFF /* Supporting Files */,
 				FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */,
+				FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */,
 			);
 			path = InputValidatorsExampleTests;
 			sourceTree = "<group>";
@@ -305,11 +308,6 @@
 				CLASSPREFIX = IV;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Ivan Lisovyi";
-				TargetAttributes = {
-					808F5AC0182A1D270019CEFF = {
-						TestTargetID = 808F5AA5182A1D270019CEFF;
-					};
-				};
 			};
 			buildConfigurationList = 808F5AA1182A1D260019CEFF /* Build configuration list for PBXProject "InputValidatorsExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -381,8 +379,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA95DA0D1C0CD8C0003C8982 /* LKValidatorError.m in Sources */,
+				FA95DA0A1C0CD77B003C8982 /* LKValidatorErrorTests.m in Sources */,
 				FAA7C8EB1C09D4E300110A44 /* LKValidatorTests.m in Sources */,
-				8014DCC5182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +453,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s i386 arm64";
 			};
 			name = Debug;
 		};
@@ -488,7 +487,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s i386 arm64";
 			};
 			name = Release;
 		};
@@ -525,7 +524,6 @@
 		808F5AD6182A1D270019CEFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InputValidatorsExample.app/InputValidatorsExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -540,7 +538,6 @@
 				INFOPLIST_FILE = "InputValidatorsExampleTests/Supporting Files/InputValidatorsExampleTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramotion.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -548,7 +545,6 @@
 		808F5AD7182A1D270019CEFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InputValidatorsExample.app/InputValidatorsExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -559,7 +555,6 @@
 				INFOPLIST_FILE = "InputValidatorsExampleTests/Supporting Files/InputValidatorsExampleTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramotion.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
