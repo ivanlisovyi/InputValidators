@@ -36,23 +36,22 @@
 
 #pragma mark - Validation
 
-- (BOOL)validate:(NSString *)text error:(NSError **)error {
-    if (text.length == 0) {
-        if (error) {
-            *error = self.error;
+- (BOOL)validate:(NSString *)string error:(NSError **)error {
+    BOOL validationRequired = (string && string.length != 0 && self.regex);
+    if (validationRequired) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.regex];
+        BOOL valid = [predicate evaluateWithObject:string];
+        
+        if (!valid) {
+            if (error) {
+                *error = self.error;
+            }
         }
+        
+        return valid;
     }
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.regex];
-    BOOL valid = [predicate evaluateWithObject:text];
-    
-    if (!valid) {
-        if (error) {
-            *error = self.error;
-        }
-    }
-    
-    return valid;
+    return [super validate:string error:error];
 }
 
 @end

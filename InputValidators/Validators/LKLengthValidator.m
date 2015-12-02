@@ -40,11 +40,7 @@ static NSUInteger const LKValidatorDefaultMinLength = 5;
 - (BOOL)validate:(NSString *)string error:(NSError **) error {
     NSString *text = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if (text.length < self.length) {
-        if (error != nil) {
-            *error = self.error;
-        }
-        
-        return NO;
+        return [super validate:string error:error];
     }
     
     return YES;

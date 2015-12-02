@@ -39,11 +39,7 @@
 
 - (BOOL)validate:(NSString *)string error:(NSError **)error {
     if (self.validators.count == 0) {
-        if (error) {
-            *error = self.error;
-        }
-        
-        return NO;
+        return [super validate:string error:error];
     }
     
     NSMutableArray *errors = [NSMutableArray array];

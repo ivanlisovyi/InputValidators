@@ -37,11 +37,7 @@
 - (BOOL)validate:(NSString *)string error:(NSError **) error {
     NSString *text = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if (text.length == 0) {
-        if (error != nil) {
-            *error = self.error;
-        }
-        
-        return NO;
+        return [super validate:string error:error];
     }
     
     return YES;

@@ -28,11 +28,21 @@
     return [[self alloc] init];
 }
 
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        _error = [LKValidatorError unknownValidationError];
+    }
+    
+    return self;
+}
+
 #pragma mark - Validation
 
 - (BOOL)validate:(NSString *)string error:(NSError **)error{
     if (error) {
-        *error = [LKValidatorError unknownValidationError];
+        *error = self.error;
     }
     
     return NO;
