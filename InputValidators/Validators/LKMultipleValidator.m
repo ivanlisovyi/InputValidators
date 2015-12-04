@@ -38,7 +38,7 @@
 #pragma mark - Validation
 
 - (BOOL)validate:(NSString *)string error:(NSError **)error {
-    if (self.validators.count == 0) {
+    if (!self.validators || self.validators.count == 0) {
         return [super validate:string error:error];
     }
     
