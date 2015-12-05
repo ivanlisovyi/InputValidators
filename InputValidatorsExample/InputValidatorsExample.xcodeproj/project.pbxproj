@@ -26,6 +26,8 @@
 		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
 		80D3F91D182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */; };
 		FA1559941C0B7F07009C7F2B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */; };
+		FA56C69F1C1333D600114DB1 /* LKTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56C69E1C1333D600114DB1 /* LKTextFieldTests.m */; };
+		FA56C6A11C1333F000114DB1 /* LKEmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56C6A01C1333F000114DB1 /* LKEmailValidatorTests.m */; };
 		FA95DA0A1C0CD77B003C8982 /* LKValidatorErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */; };
 		FA95DA0D1C0CD8C0003C8982 /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3B1C0B960200881BFA /* LKValidatorError.m */; };
 		FAA231491C0E272800BA3E08 /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E391C0B960200881BFA /* LKValidator.m */; };
@@ -92,6 +94,8 @@
 		80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleValidatorExampleViewController.xib; sourceTree = "<group>"; };
 		FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FA56C69E1C1333D600114DB1 /* LKTextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextFieldTests.m; sourceTree = "<group>"; };
+		FA56C6A01C1333F000114DB1 /* LKEmailValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKEmailValidatorTests.m; sourceTree = "<group>"; };
 		FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorErrorTests.m; sourceTree = "<group>"; };
 		FAA231521C0E280C00BA3E08 /* LKAlphaValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAlphaValidatorTests.m; sourceTree = "<group>"; };
 		FAA51E381C0B960200881BFA /* LKValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidator.h; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				FAFF15081C0F82E500F12590 /* LKRequiredValidatorTests.m */,
 				FAF45C851C109390006B1C39 /* LKLengthValidatorTests.m */,
 				FAF45C871C120BDA006B1C39 /* LKMultipleValidatorTests.m */,
+				FA56C6A01C1333F000114DB1 /* LKEmailValidatorTests.m */,
+				FA56C69E1C1333D600114DB1 /* LKTextFieldTests.m */,
 			);
 			path = InputValidatorsExampleTests;
 			sourceTree = "<group>";
@@ -408,9 +414,11 @@
 			files = (
 				FAA231491C0E272800BA3E08 /* LKValidator.m in Sources */,
 				FAFF15051C0F7C9600F12590 /* LKRegexValidatorTests.m in Sources */,
+				FA56C6A11C1333F000114DB1 /* LKEmailValidatorTests.m in Sources */,
 				FAA2314A1C0E272800BA3E08 /* LKTextField.m in Sources */,
 				FAA2314B1C0E272800BA3E08 /* LKAlphaValidator.m in Sources */,
 				FAA2314C1C0E272800BA3E08 /* LKEmailValidator.m in Sources */,
+				FA56C69F1C1333D600114DB1 /* LKTextFieldTests.m in Sources */,
 				FAA2314D1C0E272800BA3E08 /* LKLengthValidator.m in Sources */,
 				FAF45C861C109390006B1C39 /* LKLengthValidatorTests.m in Sources */,
 				FAFF15091C0F82E500F12590 /* LKRequiredValidatorTests.m in Sources */,
