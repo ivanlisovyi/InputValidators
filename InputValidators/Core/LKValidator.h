@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)validator;
 
-- (BOOL)validate:(NSString *)string error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)validate:(NSString *)string error:(NSError **)error;
 
 @end
 

@@ -34,8 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSArray<LKTextField *> *dependencies;
 @property (nonatomic, strong, readonly) NSArray<LKTextField *> *dependents;
 
-- (BOOL)validateWithDependencies:(NSError * _Nullable *)error;
-- (BOOL)validate:(NSError * _Nullable *)error;
+- (BOOL)validateWithDependencies:(NSError **)error;
+- (BOOL)validate:(NSError **)error;
 
 - (BOOL)containsValidator:(LKValidator *)validator;;
 
