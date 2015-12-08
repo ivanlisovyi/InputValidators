@@ -26,36 +26,36 @@
 		80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */; };
 		80D3F91D182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */; };
 		FA1559941C0B7F07009C7F2B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */; };
-		FA56C69F1C1333D600114DB1 /* LKTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56C69E1C1333D600114DB1 /* LKTextFieldTests.m */; };
-		FA56C6A11C1333F000114DB1 /* LKEmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56C6A01C1333F000114DB1 /* LKEmailValidatorTests.m */; };
-		FA95DA0A1C0CD77B003C8982 /* LKValidatorErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */; };
-		FA95DA0D1C0CD8C0003C8982 /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3B1C0B960200881BFA /* LKValidatorError.m */; };
-		FAA231491C0E272800BA3E08 /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E391C0B960200881BFA /* LKValidator.m */; };
-		FAA2314A1C0E272800BA3E08 /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3F1C0B960200881BFA /* LKTextField.m */; };
-		FAA2314B1C0E272800BA3E08 /* LKAlphaValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E421C0B960200881BFA /* LKAlphaValidator.m */; };
-		FAA2314C1C0E272800BA3E08 /* LKEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E441C0B960200881BFA /* LKEmailValidator.m */; };
-		FAA2314D1C0E272800BA3E08 /* LKLengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E461C0B960200881BFA /* LKLengthValidator.m */; };
-		FAA2314E1C0E272800BA3E08 /* LKMultipleValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E481C0B960200881BFA /* LKMultipleValidator.m */; };
-		FAA2314F1C0E272800BA3E08 /* LKNumericValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4A1C0B960200881BFA /* LKNumericValidator.m */; };
-		FAA231501C0E272800BA3E08 /* LKRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4C1C0B960200881BFA /* LKRegexValidator.m */; };
-		FAA231511C0E272800BA3E08 /* LKRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4E1C0B960200881BFA /* LKRequiredValidator.m */; };
-		FAA231531C0E280C00BA3E08 /* LKAlphaValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA231521C0E280C00BA3E08 /* LKAlphaValidatorTests.m */; };
-		FAA51E4F1C0B960200881BFA /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E391C0B960200881BFA /* LKValidator.m */; };
-		FAA51E501C0B960200881BFA /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3B1C0B960200881BFA /* LKValidatorError.m */; };
-		FAA51E511C0B960200881BFA /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E3F1C0B960200881BFA /* LKTextField.m */; };
-		FAA51E521C0B960200881BFA /* LKAlphaValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E421C0B960200881BFA /* LKAlphaValidator.m */; };
-		FAA51E531C0B960200881BFA /* LKEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E441C0B960200881BFA /* LKEmailValidator.m */; };
-		FAA51E541C0B960200881BFA /* LKLengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E461C0B960200881BFA /* LKLengthValidator.m */; };
-		FAA51E551C0B960200881BFA /* LKMultipleValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E481C0B960200881BFA /* LKMultipleValidator.m */; };
-		FAA51E561C0B960200881BFA /* LKNumericValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4A1C0B960200881BFA /* LKNumericValidator.m */; };
-		FAA51E571C0B960200881BFA /* LKRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4C1C0B960200881BFA /* LKRegexValidator.m */; };
-		FAA51E581C0B960200881BFA /* LKRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA51E4E1C0B960200881BFA /* LKRequiredValidator.m */; };
-		FAA7C8EB1C09D4E300110A44 /* LKValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */; };
-		FAF45C861C109390006B1C39 /* LKLengthValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF45C851C109390006B1C39 /* LKLengthValidatorTests.m */; };
-		FAF45C881C120BDA006B1C39 /* LKMultipleValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF45C871C120BDA006B1C39 /* LKMultipleValidatorTests.m */; };
-		FAFF15051C0F7C9600F12590 /* LKRegexValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF15041C0F7C9600F12590 /* LKRegexValidatorTests.m */; };
-		FAFF15071C0F81E600F12590 /* LKNumericValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF15061C0F81E600F12590 /* LKNumericValidatorTests.m */; };
-		FAFF15091C0F82E500F12590 /* LKRequiredValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF15081C0F82E500F12590 /* LKRequiredValidatorTests.m */; };
+		FA3330FE1C175ECC00E61771 /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330E81C175ECC00E61771 /* LKValidator.m */; };
+		FA3330FF1C175ECC00E61771 /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330EA1C175ECC00E61771 /* LKValidatorError.m */; };
+		FA3331001C175ECC00E61771 /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330EE1C175ECC00E61771 /* LKTextField.m */; };
+		FA3331011C175ECC00E61771 /* LKAlphaValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F11C175ECC00E61771 /* LKAlphaValidator.m */; };
+		FA3331021C175ECC00E61771 /* LKEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F31C175ECC00E61771 /* LKEmailValidator.m */; };
+		FA3331031C175ECC00E61771 /* LKLengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F51C175ECC00E61771 /* LKLengthValidator.m */; };
+		FA3331041C175ECC00E61771 /* LKMultipleValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F71C175ECC00E61771 /* LKMultipleValidator.m */; };
+		FA3331051C175ECC00E61771 /* LKNumericValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F91C175ECC00E61771 /* LKNumericValidator.m */; };
+		FA3331061C175ECC00E61771 /* LKRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330FB1C175ECC00E61771 /* LKRegexValidator.m */; };
+		FA3331071C175ECC00E61771 /* LKRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330FD1C175ECC00E61771 /* LKRequiredValidator.m */; };
+		FA3331131C175ED500E61771 /* LKAlphaValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3331091C175ED500E61771 /* LKAlphaValidatorTests.m */; };
+		FA3331141C175ED500E61771 /* LKEmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33310A1C175ED500E61771 /* LKEmailValidatorTests.m */; };
+		FA3331151C175ED500E61771 /* LKLengthValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33310B1C175ED500E61771 /* LKLengthValidatorTests.m */; };
+		FA3331161C175ED500E61771 /* LKMultipleValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33310C1C175ED500E61771 /* LKMultipleValidatorTests.m */; };
+		FA3331171C175ED500E61771 /* LKNumericValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33310D1C175ED500E61771 /* LKNumericValidatorTests.m */; };
+		FA3331181C175ED500E61771 /* LKRegexValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33310E1C175ED500E61771 /* LKRegexValidatorTests.m */; };
+		FA3331191C175ED500E61771 /* LKRequiredValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33310F1C175ED500E61771 /* LKRequiredValidatorTests.m */; };
+		FA33311A1C175ED500E61771 /* LKTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3331101C175ED500E61771 /* LKTextFieldTests.m */; };
+		FA33311B1C175ED500E61771 /* LKValidatorErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3331111C175ED500E61771 /* LKValidatorErrorTests.m */; };
+		FA33311C1C175ED500E61771 /* LKValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3331121C175ED500E61771 /* LKValidatorTests.m */; };
+		FA33311D1C175F4F00E61771 /* LKValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330E81C175ECC00E61771 /* LKValidator.m */; };
+		FA33311E1C175F4F00E61771 /* LKValidatorError.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330EA1C175ECC00E61771 /* LKValidatorError.m */; };
+		FA33311F1C175F4F00E61771 /* LKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330EE1C175ECC00E61771 /* LKTextField.m */; };
+		FA3331201C175F4F00E61771 /* LKAlphaValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F11C175ECC00E61771 /* LKAlphaValidator.m */; };
+		FA3331211C175F4F00E61771 /* LKEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F31C175ECC00E61771 /* LKEmailValidator.m */; };
+		FA3331221C175F4F00E61771 /* LKLengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F51C175ECC00E61771 /* LKLengthValidator.m */; };
+		FA3331231C175F4F00E61771 /* LKMultipleValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F71C175ECC00E61771 /* LKMultipleValidator.m */; };
+		FA3331241C175F4F00E61771 /* LKNumericValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330F91C175ECC00E61771 /* LKNumericValidator.m */; };
+		FA3331251C175F4F00E61771 /* LKRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330FB1C175ECC00E61771 /* LKRegexValidator.m */; };
+		FA3331261C175F4F00E61771 /* LKRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3330FD1C175ECC00E61771 /* LKRequiredValidator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,37 +94,37 @@
 		80D3F91A182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleValidatorExampleViewController.m; sourceTree = "<group>"; };
 		80D3F91B182B848D00DCF7C0 /* MultipleValidatorExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleValidatorExampleViewController.xib; sourceTree = "<group>"; };
 		FA1559931C0B7F07009C7F2B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		FA56C69E1C1333D600114DB1 /* LKTextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextFieldTests.m; sourceTree = "<group>"; };
-		FA56C6A01C1333F000114DB1 /* LKEmailValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKEmailValidatorTests.m; sourceTree = "<group>"; };
-		FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorErrorTests.m; sourceTree = "<group>"; };
-		FAA231521C0E280C00BA3E08 /* LKAlphaValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAlphaValidatorTests.m; sourceTree = "<group>"; };
-		FAA51E381C0B960200881BFA /* LKValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidator.h; sourceTree = "<group>"; };
-		FAA51E391C0B960200881BFA /* LKValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidator.m; sourceTree = "<group>"; };
-		FAA51E3A1C0B960200881BFA /* LKValidatorError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidatorError.h; sourceTree = "<group>"; };
-		FAA51E3B1C0B960200881BFA /* LKValidatorError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorError.m; sourceTree = "<group>"; };
-		FAA51E3C1C0B960200881BFA /* LKValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidators.h; sourceTree = "<group>"; };
-		FAA51E3E1C0B960200881BFA /* LKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKTextField.h; sourceTree = "<group>"; };
-		FAA51E3F1C0B960200881BFA /* LKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextField.m; sourceTree = "<group>"; };
-		FAA51E411C0B960200881BFA /* LKAlphaValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAlphaValidator.h; sourceTree = "<group>"; };
-		FAA51E421C0B960200881BFA /* LKAlphaValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAlphaValidator.m; sourceTree = "<group>"; };
-		FAA51E431C0B960200881BFA /* LKEmailValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKEmailValidator.h; sourceTree = "<group>"; };
-		FAA51E441C0B960200881BFA /* LKEmailValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKEmailValidator.m; sourceTree = "<group>"; };
-		FAA51E451C0B960200881BFA /* LKLengthValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLengthValidator.h; sourceTree = "<group>"; };
-		FAA51E461C0B960200881BFA /* LKLengthValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthValidator.m; sourceTree = "<group>"; };
-		FAA51E471C0B960200881BFA /* LKMultipleValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKMultipleValidator.h; sourceTree = "<group>"; };
-		FAA51E481C0B960200881BFA /* LKMultipleValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKMultipleValidator.m; sourceTree = "<group>"; };
-		FAA51E491C0B960200881BFA /* LKNumericValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNumericValidator.h; sourceTree = "<group>"; };
-		FAA51E4A1C0B960200881BFA /* LKNumericValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNumericValidator.m; sourceTree = "<group>"; };
-		FAA51E4B1C0B960200881BFA /* LKRegexValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRegexValidator.h; sourceTree = "<group>"; };
-		FAA51E4C1C0B960200881BFA /* LKRegexValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRegexValidator.m; sourceTree = "<group>"; };
-		FAA51E4D1C0B960200881BFA /* LKRequiredValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRequiredValidator.h; sourceTree = "<group>"; };
-		FAA51E4E1C0B960200881BFA /* LKRequiredValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredValidator.m; sourceTree = "<group>"; };
-		FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorTests.m; sourceTree = "<group>"; };
-		FAF45C851C109390006B1C39 /* LKLengthValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthValidatorTests.m; sourceTree = "<group>"; };
-		FAF45C871C120BDA006B1C39 /* LKMultipleValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKMultipleValidatorTests.m; sourceTree = "<group>"; };
-		FAFF15041C0F7C9600F12590 /* LKRegexValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRegexValidatorTests.m; sourceTree = "<group>"; };
-		FAFF15061C0F81E600F12590 /* LKNumericValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNumericValidatorTests.m; sourceTree = "<group>"; };
-		FAFF15081C0F82E500F12590 /* LKRequiredValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredValidatorTests.m; sourceTree = "<group>"; };
+		FA3330E71C175ECC00E61771 /* LKValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidator.h; sourceTree = "<group>"; };
+		FA3330E81C175ECC00E61771 /* LKValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidator.m; sourceTree = "<group>"; };
+		FA3330E91C175ECC00E61771 /* LKValidatorError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidatorError.h; sourceTree = "<group>"; };
+		FA3330EA1C175ECC00E61771 /* LKValidatorError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorError.m; sourceTree = "<group>"; };
+		FA3330EB1C175ECC00E61771 /* LKValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKValidators.h; sourceTree = "<group>"; };
+		FA3330ED1C175ECC00E61771 /* LKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKTextField.h; sourceTree = "<group>"; };
+		FA3330EE1C175ECC00E61771 /* LKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextField.m; sourceTree = "<group>"; };
+		FA3330F01C175ECC00E61771 /* LKAlphaValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAlphaValidator.h; sourceTree = "<group>"; };
+		FA3330F11C175ECC00E61771 /* LKAlphaValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAlphaValidator.m; sourceTree = "<group>"; };
+		FA3330F21C175ECC00E61771 /* LKEmailValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKEmailValidator.h; sourceTree = "<group>"; };
+		FA3330F31C175ECC00E61771 /* LKEmailValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKEmailValidator.m; sourceTree = "<group>"; };
+		FA3330F41C175ECC00E61771 /* LKLengthValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLengthValidator.h; sourceTree = "<group>"; };
+		FA3330F51C175ECC00E61771 /* LKLengthValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthValidator.m; sourceTree = "<group>"; };
+		FA3330F61C175ECC00E61771 /* LKMultipleValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKMultipleValidator.h; sourceTree = "<group>"; };
+		FA3330F71C175ECC00E61771 /* LKMultipleValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKMultipleValidator.m; sourceTree = "<group>"; };
+		FA3330F81C175ECC00E61771 /* LKNumericValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKNumericValidator.h; sourceTree = "<group>"; };
+		FA3330F91C175ECC00E61771 /* LKNumericValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNumericValidator.m; sourceTree = "<group>"; };
+		FA3330FA1C175ECC00E61771 /* LKRegexValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRegexValidator.h; sourceTree = "<group>"; };
+		FA3330FB1C175ECC00E61771 /* LKRegexValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRegexValidator.m; sourceTree = "<group>"; };
+		FA3330FC1C175ECC00E61771 /* LKRequiredValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKRequiredValidator.h; sourceTree = "<group>"; };
+		FA3330FD1C175ECC00E61771 /* LKRequiredValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredValidator.m; sourceTree = "<group>"; };
+		FA3331091C175ED500E61771 /* LKAlphaValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAlphaValidatorTests.m; sourceTree = "<group>"; };
+		FA33310A1C175ED500E61771 /* LKEmailValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKEmailValidatorTests.m; sourceTree = "<group>"; };
+		FA33310B1C175ED500E61771 /* LKLengthValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLengthValidatorTests.m; sourceTree = "<group>"; };
+		FA33310C1C175ED500E61771 /* LKMultipleValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKMultipleValidatorTests.m; sourceTree = "<group>"; };
+		FA33310D1C175ED500E61771 /* LKNumericValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKNumericValidatorTests.m; sourceTree = "<group>"; };
+		FA33310E1C175ED500E61771 /* LKRegexValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRegexValidatorTests.m; sourceTree = "<group>"; };
+		FA33310F1C175ED500E61771 /* LKRequiredValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKRequiredValidatorTests.m; sourceTree = "<group>"; };
+		FA3331101C175ED500E61771 /* LKTextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKTextFieldTests.m; sourceTree = "<group>"; };
+		FA3331111C175ED500E61771 /* LKValidatorErrorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorErrorTests.m; sourceTree = "<group>"; };
+		FA3331121C175ED500E61771 /* LKValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKValidatorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,7 @@
 		808F5A9D182A1D260019CEFF = {
 			isa = PBXGroup;
 			children = (
-				FAA51E361C0B960200881BFA /* InputValidators */,
+				FA3330E51C175ECC00E61771 /* Sources */,
 				808F5AAF182A1D270019CEFF /* InputValidatorsExample */,
 				808F5AC8182A1D270019CEFF /* InputValidatorsExampleTests */,
 				808F5AA8182A1D270019CEFF /* Frameworks */,
@@ -217,17 +217,8 @@
 		808F5AC8182A1D270019CEFF /* InputValidatorsExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA3331081C175ED500E61771 /* Tests */,
 				808F5AC9182A1D270019CEFF /* Supporting Files */,
-				FAA7C8EA1C09D4E300110A44 /* LKValidatorTests.m */,
-				FAA231521C0E280C00BA3E08 /* LKAlphaValidatorTests.m */,
-				FA95DA091C0CD77B003C8982 /* LKValidatorErrorTests.m */,
-				FAFF15041C0F7C9600F12590 /* LKRegexValidatorTests.m */,
-				FAFF15061C0F81E600F12590 /* LKNumericValidatorTests.m */,
-				FAFF15081C0F82E500F12590 /* LKRequiredValidatorTests.m */,
-				FAF45C851C109390006B1C39 /* LKLengthValidatorTests.m */,
-				FAF45C871C120BDA006B1C39 /* LKMultipleValidatorTests.m */,
-				FA56C6A01C1333F000114DB1 /* LKEmailValidatorTests.m */,
-				FA56C69E1C1333D600114DB1 /* LKTextFieldTests.m */,
 			);
 			path = InputValidatorsExampleTests;
 			sourceTree = "<group>";
@@ -241,57 +232,75 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FAA51E361C0B960200881BFA /* InputValidators */ = {
+		FA3330E51C175ECC00E61771 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FAA51E3C1C0B960200881BFA /* LKValidators.h */,
-				FAA51E371C0B960200881BFA /* Core */,
-				FAA51E3D1C0B960200881BFA /* UI */,
-				FAA51E401C0B960200881BFA /* Validators */,
+				FA3330E61C175ECC00E61771 /* Core */,
+				FA3330EB1C175ECC00E61771 /* LKValidators.h */,
+				FA3330EC1C175ECC00E61771 /* UI */,
+				FA3330EF1C175ECC00E61771 /* Validators */,
 			);
-			name = InputValidators;
-			path = ../InputValidators;
+			name = Sources;
+			path = ../Sources;
 			sourceTree = "<group>";
 		};
-		FAA51E371C0B960200881BFA /* Core */ = {
+		FA3330E61C175ECC00E61771 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FAA51E381C0B960200881BFA /* LKValidator.h */,
-				FAA51E391C0B960200881BFA /* LKValidator.m */,
-				FAA51E3A1C0B960200881BFA /* LKValidatorError.h */,
-				FAA51E3B1C0B960200881BFA /* LKValidatorError.m */,
+				FA3330E71C175ECC00E61771 /* LKValidator.h */,
+				FA3330E81C175ECC00E61771 /* LKValidator.m */,
+				FA3330E91C175ECC00E61771 /* LKValidatorError.h */,
+				FA3330EA1C175ECC00E61771 /* LKValidatorError.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		FAA51E3D1C0B960200881BFA /* UI */ = {
+		FA3330EC1C175ECC00E61771 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FAA51E3E1C0B960200881BFA /* LKTextField.h */,
-				FAA51E3F1C0B960200881BFA /* LKTextField.m */,
+				FA3330ED1C175ECC00E61771 /* LKTextField.h */,
+				FA3330EE1C175ECC00E61771 /* LKTextField.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		FAA51E401C0B960200881BFA /* Validators */ = {
+		FA3330EF1C175ECC00E61771 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				FAA51E411C0B960200881BFA /* LKAlphaValidator.h */,
-				FAA51E421C0B960200881BFA /* LKAlphaValidator.m */,
-				FAA51E431C0B960200881BFA /* LKEmailValidator.h */,
-				FAA51E441C0B960200881BFA /* LKEmailValidator.m */,
-				FAA51E451C0B960200881BFA /* LKLengthValidator.h */,
-				FAA51E461C0B960200881BFA /* LKLengthValidator.m */,
-				FAA51E471C0B960200881BFA /* LKMultipleValidator.h */,
-				FAA51E481C0B960200881BFA /* LKMultipleValidator.m */,
-				FAA51E491C0B960200881BFA /* LKNumericValidator.h */,
-				FAA51E4A1C0B960200881BFA /* LKNumericValidator.m */,
-				FAA51E4B1C0B960200881BFA /* LKRegexValidator.h */,
-				FAA51E4C1C0B960200881BFA /* LKRegexValidator.m */,
-				FAA51E4D1C0B960200881BFA /* LKRequiredValidator.h */,
-				FAA51E4E1C0B960200881BFA /* LKRequiredValidator.m */,
+				FA3330F01C175ECC00E61771 /* LKAlphaValidator.h */,
+				FA3330F11C175ECC00E61771 /* LKAlphaValidator.m */,
+				FA3330F21C175ECC00E61771 /* LKEmailValidator.h */,
+				FA3330F31C175ECC00E61771 /* LKEmailValidator.m */,
+				FA3330F41C175ECC00E61771 /* LKLengthValidator.h */,
+				FA3330F51C175ECC00E61771 /* LKLengthValidator.m */,
+				FA3330F61C175ECC00E61771 /* LKMultipleValidator.h */,
+				FA3330F71C175ECC00E61771 /* LKMultipleValidator.m */,
+				FA3330F81C175ECC00E61771 /* LKNumericValidator.h */,
+				FA3330F91C175ECC00E61771 /* LKNumericValidator.m */,
+				FA3330FA1C175ECC00E61771 /* LKRegexValidator.h */,
+				FA3330FB1C175ECC00E61771 /* LKRegexValidator.m */,
+				FA3330FC1C175ECC00E61771 /* LKRequiredValidator.h */,
+				FA3330FD1C175ECC00E61771 /* LKRequiredValidator.m */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		FA3331081C175ED500E61771 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3331091C175ED500E61771 /* LKAlphaValidatorTests.m */,
+				FA33310A1C175ED500E61771 /* LKEmailValidatorTests.m */,
+				FA33310B1C175ED500E61771 /* LKLengthValidatorTests.m */,
+				FA33310C1C175ED500E61771 /* LKMultipleValidatorTests.m */,
+				FA33310D1C175ED500E61771 /* LKNumericValidatorTests.m */,
+				FA33310E1C175ED500E61771 /* LKRegexValidatorTests.m */,
+				FA33310F1C175ED500E61771 /* LKRequiredValidatorTests.m */,
+				FA3331101C175ED500E61771 /* LKTextFieldTests.m */,
+				FA3331111C175ED500E61771 /* LKValidatorErrorTests.m */,
+				FA3331121C175ED500E61771 /* LKValidatorTests.m */,
+			);
+			name = Tests;
+			path = ../../Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,21 +399,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA51E561C0B960200881BFA /* LKNumericValidator.m in Sources */,
-				FAA51E511C0B960200881BFA /* LKTextField.m in Sources */,
-				FAA51E551C0B960200881BFA /* LKMultipleValidator.m in Sources */,
+				FA3331051C175ECC00E61771 /* LKNumericValidator.m in Sources */,
+				FA3331001C175ECC00E61771 /* LKTextField.m in Sources */,
+				FA3331041C175ECC00E61771 /* LKMultipleValidator.m in Sources */,
 				80D3F917182B757700DCF7C0 /* ValidatorExampleViewController.m in Sources */,
-				FAA51E531C0B960200881BFA /* LKEmailValidator.m in Sources */,
-				FAA51E581C0B960200881BFA /* LKRequiredValidator.m in Sources */,
+				FA3331021C175ECC00E61771 /* LKEmailValidator.m in Sources */,
+				FA3331071C175ECC00E61771 /* LKRequiredValidator.m in Sources */,
 				808F5ABA182A1D270019CEFF /* AppDelegate.m in Sources */,
-				FAA51E501C0B960200881BFA /* LKValidatorError.m in Sources */,
+				FA3330FF1C175ECC00E61771 /* LKValidatorError.m in Sources */,
 				8014DCC4182A20DC0084F0B9 /* ExampleViewController.m in Sources */,
-				FAA51E4F1C0B960200881BFA /* LKValidator.m in Sources */,
-				FAA51E541C0B960200881BFA /* LKLengthValidator.m in Sources */,
-				FAA51E521C0B960200881BFA /* LKAlphaValidator.m in Sources */,
+				FA3330FE1C175ECC00E61771 /* LKValidator.m in Sources */,
+				FA3331031C175ECC00E61771 /* LKLengthValidator.m in Sources */,
+				FA3331011C175ECC00E61771 /* LKAlphaValidator.m in Sources */,
 				808F5AB6182A1D270019CEFF /* main.m in Sources */,
 				80D3F91C182B848D00DCF7C0 /* MultipleValidatorExampleViewController.m in Sources */,
-				FAA51E571C0B960200881BFA /* LKRegexValidator.m in Sources */,
+				FA3331061C175ECC00E61771 /* LKRegexValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,26 +421,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA231491C0E272800BA3E08 /* LKValidator.m in Sources */,
-				FAFF15051C0F7C9600F12590 /* LKRegexValidatorTests.m in Sources */,
-				FA56C6A11C1333F000114DB1 /* LKEmailValidatorTests.m in Sources */,
-				FAA2314A1C0E272800BA3E08 /* LKTextField.m in Sources */,
-				FAA2314B1C0E272800BA3E08 /* LKAlphaValidator.m in Sources */,
-				FAA2314C1C0E272800BA3E08 /* LKEmailValidator.m in Sources */,
-				FA56C69F1C1333D600114DB1 /* LKTextFieldTests.m in Sources */,
-				FAA2314D1C0E272800BA3E08 /* LKLengthValidator.m in Sources */,
-				FAF45C861C109390006B1C39 /* LKLengthValidatorTests.m in Sources */,
-				FAFF15091C0F82E500F12590 /* LKRequiredValidatorTests.m in Sources */,
-				FAA2314E1C0E272800BA3E08 /* LKMultipleValidator.m in Sources */,
-				FAA2314F1C0E272800BA3E08 /* LKNumericValidator.m in Sources */,
-				FAA231531C0E280C00BA3E08 /* LKAlphaValidatorTests.m in Sources */,
-				FAFF15071C0F81E600F12590 /* LKNumericValidatorTests.m in Sources */,
-				FAA231501C0E272800BA3E08 /* LKRegexValidator.m in Sources */,
-				FAA231511C0E272800BA3E08 /* LKRequiredValidator.m in Sources */,
-				FA95DA0D1C0CD8C0003C8982 /* LKValidatorError.m in Sources */,
-				FA95DA0A1C0CD77B003C8982 /* LKValidatorErrorTests.m in Sources */,
-				FAA7C8EB1C09D4E300110A44 /* LKValidatorTests.m in Sources */,
-				FAF45C881C120BDA006B1C39 /* LKMultipleValidatorTests.m in Sources */,
+				FA33311D1C175F4F00E61771 /* LKValidator.m in Sources */,
+				FA33311E1C175F4F00E61771 /* LKValidatorError.m in Sources */,
+				FA33311F1C175F4F00E61771 /* LKTextField.m in Sources */,
+				FA3331201C175F4F00E61771 /* LKAlphaValidator.m in Sources */,
+				FA3331211C175F4F00E61771 /* LKEmailValidator.m in Sources */,
+				FA3331221C175F4F00E61771 /* LKLengthValidator.m in Sources */,
+				FA3331231C175F4F00E61771 /* LKMultipleValidator.m in Sources */,
+				FA3331241C175F4F00E61771 /* LKNumericValidator.m in Sources */,
+				FA3331251C175F4F00E61771 /* LKRegexValidator.m in Sources */,
+				FA3331261C175F4F00E61771 /* LKRequiredValidator.m in Sources */,
+				FA33311B1C175ED500E61771 /* LKValidatorErrorTests.m in Sources */,
+				FA33311A1C175ED500E61771 /* LKTextFieldTests.m in Sources */,
+				FA3331151C175ED500E61771 /* LKLengthValidatorTests.m in Sources */,
+				FA3331181C175ED500E61771 /* LKRegexValidatorTests.m in Sources */,
+				FA3331191C175ED500E61771 /* LKRequiredValidatorTests.m in Sources */,
+				FA3331161C175ED500E61771 /* LKMultipleValidatorTests.m in Sources */,
+				FA3331141C175ED500E61771 /* LKEmailValidatorTests.m in Sources */,
+				FA3331131C175ED500E61771 /* LKAlphaValidatorTests.m in Sources */,
+				FA3331171C175ED500E61771 /* LKNumericValidatorTests.m in Sources */,
+				FA33311C1C175ED500E61771 /* LKValidatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
