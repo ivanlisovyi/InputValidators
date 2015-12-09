@@ -8,7 +8,14 @@
 
 #import <XCTest/XCTest.h>
 
+#import "LKTextField.h"
+
+#import "LKRequiredValidator.h"
+#import "LKAlphaValidator.h"
+
 @interface LKTextFieldTests : XCTestCase
+
+@property (nonatomic, strong) LKTextField *sut;
 
 @end
 
@@ -16,24 +23,82 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.sut = [LKTextField new];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    
+    [self.sut removeAllValidators];
+    [self.sut removeAllDependencies];
+    [self.sut removeAllDependents];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testThatItDoesNotHaveValidatorsByDefault {
+    XCTAssert(self.sut.validators.count == 0);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testThatItDoesNothHaveDependenciesByDefault {
+    XCTAssert(self.sut.dependencies.count == 0);
+}
+
+- (void)testThatItDoesNotHaveDependentsByDefault {
+    XCTAssert(self.sut.dependents.count == 0);
+}
+
+- (void)testThatItsPossibleToAddValidator {
+    [self.sut addValidator:[LKRequiredValidator validator]];
+    
+    XCTAssert(self.sut.validators.count == 1);
+}
+
+- (void)testThatItThrowsWhenAddsNilToValidators {
+    LKValidator *validator = nil;
+    
+    XCTAssertNoThrow([self.sut addValidator:validator]);
+}
+
+- (void)testThatItDoesNotAddTheSameValidator {
+    LKValidator *validator = [LKRequiredValidator validator];
+    LKValidator *validator2 = validator;
+    
+    [self.sut addValidator:validator];
+    [self.sut addValidator:validator2];
+    
+    XCTAssert(self.sut.validators.count == 1);
+}
+
+- (void)testThatItsPossibleToRemoveValidator {
+    LKValidator *validator = [LKRequiredValidator validator];
+    
+    [self.sut addValidator:validator];
+    
+    XCTAssert(self.sut.validators.count == 1);
+    
+    [self.sut removeValidator:validator];
+    
+    XCTAssert(self.sut.validators.count == 0);
+}
+
+- (void)testThatItDoesNotThrowIfRemovesNilValidator {
+    LKValidator *validator = nil;
+
+    XCTAssertNoThrow([self.sut removeValidator:validator]);
+}
+
+- (void)testThatItRemovesAllValidators {
+    LKValidator *validator = [LKRequiredValidator validator];
+    LKValidator *validator2 = [LKAlphaValidator validator];
+    
+    [self.sut addValidator:validator];
+    [self.sut addValidator:validator2];
+    
+    XCTAssert(self.sut.validators.count == 2);
+    
+    [self.sut removeAllValidators];
+    
+    XCTAssert(self.sut.validators.count == 0);
 }
 
 @end

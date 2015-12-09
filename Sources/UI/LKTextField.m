@@ -22,7 +22,6 @@
 
 #import "LKTextField.h"
 
-#import "LKValidator.h"
 #import "LKMultipleValidator.h"
 
 @interface LKTextField ()
@@ -70,9 +69,11 @@
 #pragma mark - Validators
 
 - (void)addValidator:(LKValidator *)validator {
-    NSParameterAssert(validator);
+    if (!validator) {
+        return;
+    }
     
-    if ([self.validators containsObject:validator]) {
+    if ([self containsValidator:validator]) {
         return;
     }
     
@@ -104,7 +105,9 @@
 }
 
 - (void)addDependency:(LKTextField *)textField {
-    NSParameterAssert(textField);
+    if (!textField) {
+        return;
+    }
     
     if ([self.dependenciesTable containsObject:textField]) {
         return;
@@ -135,7 +138,9 @@
 }
 
 - (void)addDependent:(LKTextField *)textField {
-    NSParameterAssert(textField);
+    if (!textField) {
+        return;
+    }
     
     if ([self.dependentsTable containsObject:textField]) {
         return;
@@ -153,6 +158,14 @@
 }
 
 #pragma mark - Private Properties
+
+- (NSArray<LKValidator *> *)validators {
+    if (!_validators) {
+        _validators = [NSArray array];
+    }
+    
+    return _validators;
+}
 
 - (NSHashTable<LKTextField *> *)dependenciesTable {
     if (!_dependenciesTable) {
