@@ -101,4 +101,64 @@
     XCTAssert(self.sut.validators.count == 0);
 }
 
+- (void)testThatItAddsDependency {
+    LKTextField *dependency = [LKTextField new];
+    
+    [self.sut addDependency:dependency];
+    
+    XCTAssert(self.sut.dependencies.count == 1);
+}
+
+- (void)testThatItDoesNotToAddTheSameDependencyTwice {
+    LKTextField *dependency = [LKTextField new];
+    LKTextField *dependency2 = dependency;
+    
+    [self.sut addDependency:dependency];
+    [self.sut addDependency:dependency2];
+    
+    XCTAssert(self.sut.dependencies.count == 1);
+}
+
+- (void)testThatItDoesNotAddDependencyIfTargesIsDependant {
+    LKTextField *dependency = [LKTextField new];
+    [dependency addDependency:self.sut];
+    
+    [self.sut addDependency:dependency];
+    
+    XCTAssert(self.sut.dependencies.count == 0);
+}
+
+- (void)testThatItDoesNotAddDependencyIfDependencyIsNil {
+    LKTextField *dependency = nil;
+    
+    [self.sut addDependency:dependency];
+    
+    XCTAssert(self.sut.dependencies.count == 0);
+}
+
+- (void)testThatItRemovesDependecy {
+    LKTextField *dependency = [LKTextField new];
+    [self.sut addDependency:dependency];
+    
+    XCTAssert(self.sut.dependencies.count == 1);
+    
+    [self.sut removeDependency:dependency];
+    
+    XCTAssert(self.sut.dependencies.count == 0);
+}
+
+- (void)testThatItRemovesAllDependencies {
+    LKTextField *textField = [LKTextField new];
+    LKTextField *textField2 = [LKTextField new];
+    
+    [self.sut addDependency:textField];
+    [self.sut addDependency:textField2];
+    
+    XCTAssert(self.sut.dependencies.count == 2);
+    
+    [self.sut removeAllDependencies];
+    
+    XCTAssert(self.sut.dependencies.count == 0);
+}
+
 @end
