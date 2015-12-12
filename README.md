@@ -74,7 +74,7 @@ NSString *email = @"email@example.com"
 LKValidator *validator = [LKMultipleValidator validator];
 validator.validators = [[LKRequiredInputValidator validator], [LKEmailInputValidator validator]];
 NSError *error = nil;
-BOOL isValid = [LKValidator validate:email validators:validators error:&error];
+BOOL isValid = [LKValidator validate:email error:&error];
 
 if (!isValid) {
   NSLog(@"%@", [error localizedFailureReason]);
