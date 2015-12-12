@@ -1,44 +1,32 @@
-# InputValidators 
+# InputValidators
 [![Build Status](https://travis-ci.org/kshin/InputValidators.svg?branch=master)](https://travis-ci.org/kshin/InputValidators)
 [![codecov.io](https://codecov.io/github/kshin/InputValidators/coverage.svg?branch=master)](https://codecov.io/github/kshin/InputValidators?branch=master)
 
 Simple Objective-C solution for text validation.
 
-Currently available default validators:
+Currently available validators:
 
 > * Required validator
 * Email validator
 * Alpha validator
 * Numeric validator
 * Length validator
-* RegularExpression validator
+* Regex validator
+* Multiple validator
+
+## Important
+The latest version `1.0.0` contains breaking changes and it is **not backward compatible** with previous latests version `0.3.3`. In case if you need a support for pre iOS7 versions use previous latest version `0.3.3`.
 
 ## Requirements
-* Xcode 5.0 or higher
-* Apple LLVM compiler
-* iOS 5.0 or higher
+* Xcode 7.0 or higher
+* iOS 7.0 or higher
 * ARC
 
 ## Installation
 
-### Cocoa Pods 
+### Cocoa Pods
 
 The recommended approach for installating `InputValidators` is via the [CocoaPods](http://cocoapods.org/) package manager.
-
-Install CocoaPods if not already available:
-
-``` bash
-$ [sudo] gem install cocoapods
-$ pod setup
-```
-
-Change to the directory of your Xcode project:
-
-``` bash
-$ cd /path/to/MyProject
-$ touch Podfile
-$ edit Podfile
-```
 
 Edit your Podfile and add InputValidators:
 
@@ -64,14 +52,14 @@ All you need to do is drop `InputValidators` files into your project, and add `#
 
 ## Example Usage
 
-#### Text Validation 
+#### Text Validation
 
 ``` objective-c
-NSString *emailString = @"email@example.com"
+NSString *email = @"email@example.com"
 
-InputValidator *validator = [LKEmailInputValidator validator];
+InputValidator *validator = [LKEmailValidator validator];
 NSError *error = nil;
-BOOL isValid = [validator validateInput:emailString error:&error];
+BOOL isValid = [validator validate:email error:&error];
 
 if (!isValid) {
   NSLog(@"%@", [error localizedFailureReason]);
@@ -81,16 +69,21 @@ if (!isValid) {
 ### Text Validation with multiple validators
 
 ``` objective-c
-NSString *emailString = @"email@example.com"
+NSString *email = @"email@example.com"
 
-NSArray *validators = @[[LKRequiredInputValidator validator], [LKEmailInputValidator validator]];
+LKValidator *validator = [LKMultipleValidator validator];
+validator.validators = [[LKRequiredInputValidator validator], [LKEmailInputValidator validator]];
 NSError *error = nil;
-BOOL isValid = [LKValidator validateInput:emailString validators:validators error:&error];
+BOOL isValid = [LKValidator validate:email validators:validators error:&error];
 
 if (!isValid) {
   NSLog(@"%@", [error localizedFailureReason]);
 }
 ```
+
+## Roadmap
+
+- [ ] Documentation
 
 ## License
 
@@ -103,5 +96,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
