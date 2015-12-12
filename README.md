@@ -52,7 +52,7 @@ All you need to do is drop `InputValidators` files into your project, and add `#
 
 ## Example Usage
 
-#### Text Validation
+### Text Validation
 
 ``` objective-c
 NSString *email = @"email@example.com"
@@ -84,6 +84,7 @@ if (!isValid) {
 ## Roadmap
 
 - [ ] Documentation
+- [ ] Swift version
 
 ## License
 
