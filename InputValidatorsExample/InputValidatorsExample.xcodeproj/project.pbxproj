@@ -588,6 +588,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -609,6 +610,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InputValidatorsExample/Supporting Files/InputValidatorsExample-Prefix.pch";
 				INFOPLIST_FILE = "InputValidatorsExampleTests/Supporting Files/InputValidatorsExampleTests-Info.plist";
