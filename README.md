@@ -24,7 +24,7 @@ The latest version `1.0.0` contains breaking changes and it is **not backward co
 
 ## Installation
 
-### Cocoa Pods
+### CocoaPods
 
 The recommended approach for installating `InputValidators` is via the [CocoaPods](http://cocoapods.org/) package manager.
 
