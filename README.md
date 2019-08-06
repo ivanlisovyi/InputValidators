@@ -1,6 +1,5 @@
 # InputValidators
 [![Build Status](https://travis-ci.org/kshin/InputValidators.svg?branch=master)](https://travis-ci.org/kshin/InputValidators)
-[![codecov.io](https://codecov.io/github/kshin/InputValidators/coverage.svg?branch=master)](https://codecov.io/github/kshin/InputValidators?branch=master)
 
 Simple Objective-C solution for text validation.
 
