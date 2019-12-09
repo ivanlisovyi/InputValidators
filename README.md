@@ -1,5 +1,4 @@
 # InputValidators
-[![Build Status](https://travis-ci.org/kshin/InputValidators.svg?branch=master)](https://travis-ci.org/kshin/InputValidators)
 
 Simple Objective-C solution for text validation.
 
@@ -79,11 +78,6 @@ if (!isValid) {
   NSLog(@"%@", [error localizedFailureReason]);
 }
 ```
-
-## Roadmap
-
-- [ ] Documentation
-- [ ] Swift version
 
 ## License
 
