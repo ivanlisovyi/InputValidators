@@ -4,7 +4,7 @@ Simple Objective-C solution for text validation.
 
 Currently available validators:
 
-> * Required validator
+* Required validator
 * Email validator
 * Alpha validator
 * Numeric validator
